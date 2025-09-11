@@ -1,0 +1,11 @@
+:root {
+  --primary-color: #5a3123;
+  --secondary-color: #d7a46c;
+  --text-color: #ffffff;
+  --bg-color: #5a3123;
+  --card-bg-color: #ead7c1;
+  --white-color: #ffffff;
+
+  --border-radius: 10px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

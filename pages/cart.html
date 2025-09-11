@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мастерская шоколада | корзина</title>
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Шоколадная мастерская Юлии Гавриловой в Санкт-Петербурге"
+    />
+    <meta name="author" content="Гаврилова Юлия" />
+
+    <!-- Open Graph (для соцсетей) -->
+    <meta property="og:title" content="Мастерская шоколада | коробки" />
+    <meta
+      property="og:description"
+      content="Шоколадные изделия в Санкт-Петербурге"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:image" content="https://example.com/preview.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Название страницы" />
+    <meta name="twitter:description" content="Описание для Twitter" />
+    <meta name="twitter:image" content="https://example.com/preview.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    <!-- Оптимизация загрузки -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="preload" href="../css/main.css" as="style" />
+    <link rel="preload" href="../css/page.css" as="style" />
+    <link rel="preload" href="../css/cart.css" as="style" />
+    <link rel="preload" href="../js/cartPage.js" as="script" />
+    <link
+      rel="preload"
+      href="../js/controller/orderController.js"
+      as="script"
+    />
+
+    <!-- Шрифты -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/page.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
+  </head>
+
+  <body>
+    <main class="content">
+      <section class="page-header">
+        <a href="#" id="back-link" class="back-icon" aria-label="Назад">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M15 18L9 12L15 6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <h2 class="page-title">Корзина</h2>
+        <a class="cart-link" href="cart.html">
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <div class="cart-badge hidden">0</div>
+        </a>
+      </section>
+
+      <div class="content-padding"></div>
+
+      <section id="empty-cart" class="cart-box hidden">
+        <div class="cart-box-icon">
+          <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M3 7L12 3L21 7L12 11L3 7Z"
+              stroke="#8e5a3c"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M3 7V17L12 21V11L3 7Z"
+              stroke="#8e5a3c"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M21 7V17L12 21V11L21 7Z"
+              stroke="#8e5a3c"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <h3 class="cart-box-title">Ваша корзина пуста</h3>
+        <p class="cart-box-text">Добавьте товары, чтобы оформить заказ.</p>
+        <a href="../index.html" class="checkout-button">Перейти в каталог</a>
+      </section>
+
+      <div class="cart-content-wrapper">
+        <section class="cart-items"></section>
+
+        <section class="cart-summary">
+          <div class="cart-summary-line">
+            <span>Всего товаров:</span>
+            <span class="summary-count">0</span>
+          </div>
+          <div class="cart-summary-line">
+            <span>Итого:</span>
+            <span class="summary-price">0 ₽</span>
+          </div>
+        </section>
+
+        <section class="cart-form">
+          <h3>Оформление заказа</h3>
+          <form id="order-form">
+            <input type="text" name="name" placeholder="Ваше имя" required />
+            <input type="tel" name="phone" placeholder="Телефон" required />
+            <textarea
+              name="comment"
+              rows="3"
+              placeholder="Комментарий к заказу (опционально)"
+            ></textarea>
+            <button type="submit" class="submit-button">Заказать</button>
+          </form>
+        </section>
+      </div>
+
+      <section id="order-created" class="cart-box hidden">
+        <div class="cart-box-icon">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M20 6L9 17L4 12"
+              stroke="#8e5a3c"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <h3 class="cart-box-title">Спасибо за заказ!</h3>
+        <p id="order-success-text" class="cart-box-text"></p>
+        <a href="../index.html" class="checkout-button">Вернуться на главную</a>
+      </section>
+    </main>
+
+    <script src="../js/cartPage.js" type="module" defer></script>
+    <script
+      src="../js/controller/orderController.js"
+      type="module"
+      defer
+    ></script>
+  </body>
+</html>
