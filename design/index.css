@@ -59,10 +59,6 @@ a {
   font-weight: bold;
 }
 
-.cart-badge.hidden {
-  display: none;
-}
-
 .subtitle {
   text-align: center;
   font-size: 1.5rem;

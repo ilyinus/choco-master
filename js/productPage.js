@@ -29,17 +29,17 @@ class ProductCard {
   }
 
   bindElements() {
-    this.productTitle = this.requireElement('.product-title')
-    this.productPrice = this.requireElement('.product-price')
+    this.productTitle = this.requireElement('.product-card-title')
+    this.productPrice = this.requireElement('.product-card-price')
     this.slides = this.requireElement('.slides')
     this.slide = this.slides.querySelectorAll('.slide')
     this.images = this.card.querySelectorAll('.product-image')
     this.prevBtn = this.requireElement('.prev-btn')
     this.nextBtn = this.requireElement('.next-btn')
     this.dotsContainer = this.requireElement('.dots-container')
-    this.addToCartButton = this.requireElement('.add-to-cart-button')
-    this.cartControls = this.card.querySelectorAll('.card-control-button')
-    this.cartCount = this.requireElement('.cart-count')
+    this.addToCartButton = this.requireElement('.product-card-add-to-cart-button')
+    this.cartControls = this.card.querySelectorAll('.product-card-cart-count-button')
+    this.cartCount = this.requireElement('.product-card-cart-count')
   }
 
   requireElement(selector) {
@@ -146,11 +146,11 @@ eventBus.subscribe('cart:update', (e) => {
 })
 
 document
-  .querySelectorAll('.card')
+  .querySelectorAll('.product-card')
   .forEach((card) => new ProductCard(card, modal))
 
 document.addEventListener('click', (e) => {
-  const card = e.target.closest('.card')
+  const card = e.target.closest('.product-card')
   if (!card) return
   const inst = card.instance
 
@@ -159,21 +159,21 @@ document.addEventListener('click', (e) => {
   if (e.target.classList.contains('dot'))
     inst.slideToImage(parseInt(e.target.dataset.index))
   if (e.target.classList.contains('product-image')) inst.openImage()
-  if (e.target.classList.contains('add-to-cart-button'))
+  if (e.target.classList.contains('product-card-add-to-cart-button'))
     inst.changeCartCount('+')
-  if (e.target.classList.contains('card-control-button'))
+  if (e.target.classList.contains('product-card-cart-count-button'))
     inst.changeCartCount(e.target.dataset.action)
 })
 
 document.addEventListener('touchstart', (e) => {
-  const card = e.target.closest('.card')
+  const card = e.target.closest('.product-card')
   if (card) {
     card.instance.touchStart(e)
   }
 })
 
 document.addEventListener('touchend', (e) => {
-  const card = e.target.closest('.card')
+  const card = e.target.closest('.product-card')
   if (card) {
     card.instance.touchEnd(e)
   }

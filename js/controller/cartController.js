@@ -92,7 +92,7 @@ class CartController {
 
   updateCartBadge() {
     if (this.badge) {
-      const count = this.getTotalCount()
+      const count = this.getTotalCount()      
       this.badge.classList.toggle('hidden', count === 0)
       this.badge.innerText = count
     }
