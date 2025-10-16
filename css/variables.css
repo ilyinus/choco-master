@@ -1,6 +1,7 @@
 :root {
-  --primary-color: #5a3123;  
+  --primary-color: #5a3123;
   --white-color: #ffffff;
   --card-bg-color: #ddcba4;
-  --border-radius: 10px;  
+  --border-radius: 10px;
+  --bg-button: #8e5a33;
 }

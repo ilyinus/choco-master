@@ -22,7 +22,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 5px;  
+  padding: 10px 5px;
+  margin-bottom: 2rem;
 }
 
 .title {

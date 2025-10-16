@@ -48,11 +48,11 @@ class CartPage {
       }
     })
 
-    this.backLink.addEventListener('click', (e) => {
-      e.preventDefault()
-      const lastPage = sessionStorage.getItem('lastPage')
-      window.location.href = lastPage || '/index.html'
-    })
+    // this.backLink.addEventListener('click', (e) => {
+    //   e.preventDefault()
+    //   const lastPage = sessionStorage.getItem('lastPage')
+    //   window.location.href = lastPage || '/index.html'
+    // })
 
     this.orderForm.addEventListener('submit', (e) => {
       e.preventDefault()
@@ -93,13 +93,15 @@ class CartPage {
         </div>
       </a>
       <div class="cart-item-info">
-        <div class="cart-item-title">${name}</div>
-        <div class="cart-item-price">${price} ₽</div>
+        <div class="cart-item-title">${name}</div>        
       </div>
       <div class="cart-item-controls">
-        <button class="cart-control-button" data-action="-">-</button>
-        <span class="cart-item-count">${count}</span>
-        <button class="cart-control-button" data-action="+">+</button>
+        <div class="cart-item-price">${price} ₽</div>
+        <div>
+          <button class="cart-control-button" data-action="-">-</button>
+          <span class="cart-item-count">${count}</span>
+          <button class="cart-control-button" data-action="+">+</button>
+        </div>        
       </div>
     `
     return el
