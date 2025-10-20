@@ -48,11 +48,11 @@ class CartPage {
       }
     })
 
-    // this.backLink.addEventListener('click', (e) => {
-    //   e.preventDefault()
-    //   const lastPage = sessionStorage.getItem('lastPage')
-    //   window.location.href = lastPage || '/index.html'
-    // })
+    this.backLink.addEventListener('click', (e) => {
+      e.preventDefault()
+      const lastPage = sessionStorage.getItem('lastPage')
+      window.location.href = lastPage || '/index.html'
+    })
 
     this.orderForm.addEventListener('submit', (e) => {
       e.preventDefault()

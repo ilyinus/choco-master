@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Базовые настройки -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Мастерская шоколада | Букеты</title>
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Шоколад ручной работы в Санкт-Петербурге. Авторские коробки, конфеты, наборы для подарков. Закажите уникальные шоколадные изделия."
+    />
+    <meta
+      name="keywords"
+      content="шоколад ручной работы, конфеты, подарочные наборы, Санкт-Петербург, мастерская шоколада"
+    />
+    <link rel="canonical" href="https://choco-master.ru/bouquets.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Мастерская шоколада" />
+    <meta
+      property="og:description"
+      content="Авторский шоколад ручной работы в Санкт-Петербурге. Подарки и наборы к любому празднику."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://choco-master.ru/" />
+    <meta
+      property="og:image"
+      content="https://choco-master.ru/assets/preview-main.jpg"
+    />
+    <meta property="og:locale" content="ru_RU" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Мастерская шоколада" />
+    <meta
+      name="twitter:description"
+      content="Авторский шоколад ручной работы в Санкт-Петербурге."
+    />
+    <meta
+      name="twitter:image"
+      content="https://choco-master.ru/assets/preview-main.jpg"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/assets/preview-main.jpg" />
+
+    <!-- Оптимизация загрузки -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="preload" href="../css/index.css" as="style" />
+    <link rel="preload" href="../css/product.css" as="style" />
+    <link rel="preload" href="../css/variables.css" as="style" />
+    <link rel="preload" href="../js/productPage.js" as="script" />
+    <link rel="preload" href="../js/productFilter.js" as="script" />
+
+    <!-- Шрифты -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/product.css" />
+    <link rel="stylesheet" href="../css/variables.css" />
+  </head>
+
+  <body>
+    <!-- Модальное окно -->
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="modal-slider">
+        <div class="modal-slides"></div>
+      </div>
+      <div class="modal-thumbnails-container"></div>
+      <span class="modal-close-button">&times;</span>
+    </div>
+
+    <div class="container">
+      <header class="header">
+        <a href="https://t.me/your_username" target="_blank">
+          <svg viewBox="0 0 24 24" fill="#ffffff">
+            <path
+              d="M23.1117 4.49449C23.4296 2.94472 21.9074 1.65683 20.4317 2.227L2.3425 9.21601C0.694517 9.85273 0.621087 12.1572 2.22518 12.8975L6.1645 14.7157L8.03849 21.2746C8.13583 21.6153 8.40618 21.8791 8.74917 21.968C9.09216 22.0568 9.45658 21.9576 9.70712 21.707L12.5938 18.8203L16.6375 21.8531C17.8113 22.7334 19.5019 22.0922 19.7967 20.6549L23.1117 4.49449ZM3.0633 11.0816L21.1525 4.0926L17.8375 20.2531L13.1 16.6999C12.7019 16.4013 12.1448 16.4409 11.7929 16.7928L10.5565 18.0292L10.928 15.9861L18.2071 8.70703C18.5614 8.35278 18.5988 7.79106 18.2947 7.39293C17.9906 6.99479 17.4389 6.88312 17.0039 7.13168L6.95124 12.876L3.0633 11.0816ZM8.17695 14.4791L8.78333 16.6015L9.01614 15.321C9.05253 15.1209 9.14908 14.9366 9.29291 14.7928L11.5128 12.573L8.17695 14.4791Z"
+            />
+          </svg>
+        </a>
+        <a href="../index.html"><div class="title">Мастерская шоколада</div></a>
+        <a class="cart-link" href="cart.html">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z"
+              stroke="#ffffff"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+          <div class="cart-badge hidden">0</div>
+        </a>
+      </header>
+
+      <section class="filters"></section>
+
+      <!-- Основной контент -->
+      <main class="content">
+        <!-- Сетка продуктов -->
+        <div class="product-grid">
+          <div
+            class="product-card"
+            id="product-33"
+            data-categories="Букеты"
+            data-tags="dumplings"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/33/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Пельмени в букете 27 шт."
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/33/2.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Пельмени в букете 27 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="1590">
+                1590&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Пельмени в букете 27 шт."
+              >
+                Пельмени в букете 27 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            id="product-34"
+            data-categories="Букеты"
+            data-tags="dumplings"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/34/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Пельмени в букете 37 шт."
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/34/2.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Пельмени в букете 37 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="1990">
+                1990&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Пельмени в букете 37 шт."
+              >
+                Пельмени в букете 37 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            id="product-35"
+            data-categories="Букеты"
+            data-tags="dumplings"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/35/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Пельмени в букете 15 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="990">990&nbsp;₽</div>
+              <h2
+                class="product-card-title"
+                data-name="Пельмени в букете 15 шт."
+              >
+                Пельмени в букете 15 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            id="product-36"
+            data-categories="Букеты"
+            data-tags="dumplings"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/36/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Пельмени в букете 45 шт."
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/36/2.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Пельмени в букете 45 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="2190">
+                2190&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Пельмени в букете 45 шт."
+              >
+                Пельмени в букете 45 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            id="product-37"
+            data-categories="Букеты"
+            data-tags="dumplings"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/37/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Пельмени в букете 19 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="1290">
+                1290&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Пельмени в букете 19 шт."
+              >
+                Пельмени в букете 19 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Подключение JS -->
+    <script src="../js/productPage.js" type="module" defer></script>
+    <script src="../js/productFilter.js" type="module" defer></script>
+  </body>
+</html>

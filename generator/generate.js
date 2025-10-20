@@ -21,6 +21,7 @@ const templates = {
 
 const pageNameMap = {
   Коробки: 'boxes',
+  Букеты: 'bouquets',
   Пельмени: 'dumplings',
   '8 марта': '8-march',
   'Новый год': 'new-year',
@@ -47,6 +48,7 @@ function createCardHTML(card) {
   card = templates.cardTemplate
     .replace('{{id}}', card.id)
     .replace('{{categories}}', card.categories.join(','))
+    .replace('{{tags}}', card.tags.join(','))
     .replace('{{slides}}', slides)
     .replaceAll('{{price}}', card.price)
     .replaceAll('{{name}}', card.name)

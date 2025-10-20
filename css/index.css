@@ -39,6 +39,7 @@ a {
 .header svg {
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
 
 .cart-link {
@@ -127,6 +128,49 @@ a {
 .tg-button svg {
   width: 25px;
   height: 25px;
+}
+
+.notification-container {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  pointer-events: none; /* клики проходят сквозь */
+}
+
+.notification {
+  min-width: 250px;
+  max-width: 400px;
+  padding: 15px 20px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  pointer-events: auto; /* чтобы можно было закрыть вручную в будущем */
+}
+
+.notification.success {
+  background: rgba(46, 204, 113, 0.95); /* зеленый */
+}
+
+.notification.error {
+  background: rgba(231, 76, 60, 0.95); /* красный */
+}
+
+.notification.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (max-width: 480px) {
