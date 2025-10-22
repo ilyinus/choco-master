@@ -289,6 +289,7 @@
   padding: 0.5rem 1rem;
   align-self: flex-end;
   cursor: pointer;
+  color: var(--primary-color);
 }
 
 /* Контент с фильтрами */
@@ -317,6 +318,18 @@
   margin-bottom: 0.5rem;
 }
 
+.filter-button.hidden {
+  display: none;
+}
+
+.filter-button-active.hidden {
+  display: none;
+}
+
+.empty-svg.hidden {
+  display: none;
+}
+
 /* Кнопка применить */
 .filters-apply-button {
   margin: 0 1rem 1rem 1rem;
@@ -336,6 +349,22 @@
 
 .filters-apply-button:hover {
   background-color: var(--bg-button-hover);
+}
+
+.clear-all-filters {
+  margin: 0 3rem 1rem 3rem;
+  width: calc(100% - 6rem);
+  border-radius: 25px;
+  cursor: pointer;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 0.5rem;
+  background-color: var(--card-bg-color);
+}
+
+.clear-all-filters.hidden {
+  display: none;
 }
 
 /* Контейнер для каждого фильтра */

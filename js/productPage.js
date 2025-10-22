@@ -191,8 +191,7 @@ document.addEventListener('touchend', (e) => {
 
 function processParams() {
   const productId = params.get('id')
-  if (productId) {
-    console.log(productId)
+  if (productId) {    
     document.querySelectorAll('.product-card').forEach((card) => {
       if (card.id !== productId) {
         card.style.display = 'none'

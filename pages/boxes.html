@@ -84,22 +84,23 @@
       <span class="modal-close-button">&times;</span>
     </div>
 
-    <!-- Оверлей -->
-    <div class="filters-overlay" id="filters-overlay">
+    <!-- Фильтры -->
+    <div class="filters-overlay hidden" id="filters-overlay">
       <section class="filters-panel">
         <button class="filters-close" id="close-filters">&times;</button>
 
-        <div class="filters-content">
-          <div class="filters-content-title">Праздники</div>
+        <div class="filters-content" id="filters-content">
+          <button class="clear-all-filters hidden" id="clear-all-filters">Сбросить фильтры &times;</button>
+          <!-- <div class="filters-content-title">Праздники</div> -->
           <label class="switch">
             <span class="label-text">Пельмени</span>
-            <input type="checkbox" />
+            <input type="checkbox" data-filter-tag="dumplings"/>
             <span class="filter-slider"></span>
           </label>
 
           <label class="switch">
             <span class="label-text">8 марта</span>
-            <input type="checkbox" />
+            <input type="checkbox" data-filter-tag="8-march"/>
             <span class="filter-slider"></span>
           </label>
 
@@ -169,19 +170,26 @@
             <span class="filter-slider"></span>
           </label>
         </div>
-
-        <button class="filters-apply-button">Применить</button>
+        <button class="filters-apply-button" id="filters-apply-button">Применить</button>
       </section>
     </div>
 
     <div class="container">
-      <header class="header">
-        <div class="filter-button">
+      <header class="header">        
+        <div class="filter-button" id="filter-button">
           <svg viewBox="0 0 24 24" stroke="#ffffff">
             <path
               d="M15 10.5A3.502 3.502 0 0 0 18.355 8H21a1 1 0 1 0 0-2h-2.645a3.502 3.502 0 0 0-6.71 0H3a1 1 0 0 0 0 2h8.645A3.502 3.502 0 0 0 15 10.5zM3 16a1 1 0 1 0 0 2h2.145a3.502 3.502 0 0 0 6.71 0H21a1 1 0 1 0 0-2h-9.145a3.502 3.502 0 0 0-6.71 0H3z"
               fill="#ffffff"
             ></path>
+          </svg>          
+        </div>
+        <div class="filter-button-active hidden" id="filter-button-active">
+          <svg viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5a3123"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#ffffff" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M15 10.5A3.502 3.502 0 0 0 18.355 8H21a1 1 0 1 0 0-2h-2.645a3.502 3.502 0 0 0-6.71 0H3a1 1 0 0 0 0 2h8.645A3.502 3.502 0 0 0 15 10.5zM3 16a1 1 0 1 0 0 2h2.145a3.502 3.502 0 0 0 6.71 0H21a1 1 0 1 0 0-2h-9.145a3.502 3.502 0 0 0-6.71 0H3z" fill="#5a3123"></path></g></svg>
+        </div>
+        <div class="empty-svg hidden" id="empty-svg">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path/>
           </svg>
         </div>
         <a href="../index.html"><div class="title">Мастерская шоколада</div></a>
@@ -2557,19 +2565,5 @@
     <!-- Подключение JS -->
     <script src="../js/productPage.js" type="module" defer></script>
     <script src="../js/productFilter.js" type="module" defer></script>
-
-    <script>
-      const overlay = document.getElementById('filters-overlay')
-      // const openBtn = document.getElementById('open-filters')
-      const closeBtn = document.getElementById('close-filters')
-
-      // openBtn.addEventListener('click', () =>
-      //   overlay.classList.remove('hidden')
-      // )
-      closeBtn.addEventListener('click', () => overlay.classList.add('hidden'))
-      overlay.addEventListener('click', (e) => {
-        if (e.target === overlay) overlay.classList.add('hidden')
-      })
-    </script>
   </body>
 </html>
