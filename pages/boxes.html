@@ -84,15 +84,106 @@
       <span class="modal-close-button">&times;</span>
     </div>
 
+    <!-- Оверлей -->
+    <div class="filters-overlay" id="filters-overlay">
+      <section class="filters-panel">
+        <button class="filters-close" id="close-filters">&times;</button>
+
+        <div class="filters-content">
+          <div class="filters-content-title">Праздники</div>
+          <label class="switch">
+            <span class="label-text">Пельмени</span>
+            <input type="checkbox" />
+            <span class="filter-slider"></span>
+          </label>
+
+          <label class="switch">
+            <span class="label-text">8 марта</span>
+            <input type="checkbox" />
+            <span class="filter-slider"></span>
+          </label>
+
+          <label class="switch">
+            <span class="label-text">23 февраля</span>
+            <input type="checkbox" />
+            <span class="filter-slider"></span>
+          </label>
+
+          <label class="switch">
+            <span class="label-text">Пасха</span>
+            <input type="checkbox" />
+            <span class="filter-slider"></span>
+          </label>
+
+          <label class="switch">
+            <span class="label-text">День учителя</span>
+            <input type="checkbox" />
+            <span class="filter-slider"></span>
+          </label>
+
+          <label class="switch">
+            <span class="label-text">День воспитателя</span>
+            <input type="checkbox" />
+            <span class="filter-slider"></span>
+          </label>
+
+          <label class="switch">
+            <span class="label-text">1 сентября</span>
+            <input type="checkbox" />
+            <span class="filter-slider"></span>
+          </label>
+
+          <label class="switch">
+            <span class="label-text">Выпускной</span>
+            <input type="checkbox" />
+            <span class="filter-slider"></span>
+          </label>
+
+          <label class="switch">
+            <span class="label-text">День матери</span>
+            <input type="checkbox" />
+            <span class="filter-slider"></span>
+          </label>
+
+          <label class="switch">
+            <span class="label-text">Новый год</span>
+            <input type="checkbox" />
+            <span class="filter-slider"></span>
+          </label>
+
+          <label class="switch">
+            <span class="label-text">Тематические</span>
+            <input type="checkbox" />
+            <span class="filter-slider"></span>
+          </label>
+
+          <label class="switch">
+            <span class="label-text">Шляпные коробки</span>
+            <input type="checkbox" />
+            <span class="filter-slider"></span>
+          </label>
+
+          <label class="switch">
+            <span class="label-text">День воспитателя</span>
+            <input type="checkbox" />
+            <span class="filter-slider"></span>
+          </label>
+        </div>
+
+        <button class="filters-apply-button">Применить</button>
+      </section>
+    </div>
+
     <div class="container">
       <header class="header">
-        <a href="https://t.me/your_username" target="_blank">
-          <svg viewBox="0 0 24 24" fill="#ffffff">
+        <div class="filter-button">
+          <svg viewBox="0 0 24 24" stroke="#ffffff">
             <path
-              d="M23.1117 4.49449C23.4296 2.94472 21.9074 1.65683 20.4317 2.227L2.3425 9.21601C0.694517 9.85273 0.621087 12.1572 2.22518 12.8975L6.1645 14.7157L8.03849 21.2746C8.13583 21.6153 8.40618 21.8791 8.74917 21.968C9.09216 22.0568 9.45658 21.9576 9.70712 21.707L12.5938 18.8203L16.6375 21.8531C17.8113 22.7334 19.5019 22.0922 19.7967 20.6549L23.1117 4.49449ZM3.0633 11.0816L21.1525 4.0926L17.8375 20.2531L13.1 16.6999C12.7019 16.4013 12.1448 16.4409 11.7929 16.7928L10.5565 18.0292L10.928 15.9861L18.2071 8.70703C18.5614 8.35278 18.5988 7.79106 18.2947 7.39293C17.9906 6.99479 17.4389 6.88312 17.0039 7.13168L6.95124 12.876L3.0633 11.0816ZM8.17695 14.4791L8.78333 16.6015L9.01614 15.321C9.05253 15.1209 9.14908 14.9366 9.29291 14.7928L11.5128 12.573L8.17695 14.4791Z"
-            />
+              d="M15 10.5A3.502 3.502 0 0 0 18.355 8H21a1 1 0 1 0 0-2h-2.645a3.502 3.502 0 0 0-6.71 0H3a1 1 0 0 0 0 2h8.645A3.502 3.502 0 0 0 15 10.5zM3 16a1 1 0 1 0 0 2h2.145a3.502 3.502 0 0 0 6.71 0H21a1 1 0 1 0 0-2h-9.145a3.502 3.502 0 0 0-6.71 0H3z"
+              fill="#ffffff"
+            ></path>
           </svg>
-        </a>
+        </div>
         <a href="../index.html"><div class="title">Мастерская шоколада</div></a>
         <a class="cart-link" href="cart.html">
           <svg viewBox="0 0 24 24" fill="none">
@@ -107,11 +198,6 @@
           <div class="cart-badge hidden">0</div>
         </a>
       </header>
-
-      <section class="filters-block">
-        <div class="filters"></div>
-        <div class="clear-filter-button hidden">Сбросить фильтры &#65794;</div>
-      </section>
 
       <!-- Основной контент -->
       <main class="content">
@@ -2471,5 +2557,19 @@
     <!-- Подключение JS -->
     <script src="../js/productPage.js" type="module" defer></script>
     <script src="../js/productFilter.js" type="module" defer></script>
+
+    <script>
+      const overlay = document.getElementById('filters-overlay')
+      // const openBtn = document.getElementById('open-filters')
+      const closeBtn = document.getElementById('close-filters')
+
+      // openBtn.addEventListener('click', () =>
+      //   overlay.classList.remove('hidden')
+      // )
+      closeBtn.addEventListener('click', () => overlay.classList.add('hidden'))
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) overlay.classList.add('hidden')
+      })
+    </script>
   </body>
 </html>

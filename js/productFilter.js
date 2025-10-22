@@ -99,4 +99,4 @@ function hideClearFilterButton() {
   document.querySelector('.clear-filter-button').classList.add('hidden')
 }
 
-init()
+// init()
