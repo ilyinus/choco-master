@@ -247,7 +247,7 @@
   border-color: #8e5a33;
 }
 
-/* Оверлей */
+/* Фильтры  */
 .filters-overlay {
   z-index: 500;
   position: fixed;
@@ -261,14 +261,14 @@
   pointer-events: none;
 }
 
-/* Панель */
+/* Панель фильтров */
 .filters-panel {
   position: fixed;
   top: 0;
   left: 0;
   width: 300px;
   height: 100%;
-  background-color: var(--card-bg-color);
+  background-color: var(--filter-bg-color);
   display: flex;
   flex-direction: column;
   transform: translateX(-100%);
@@ -299,14 +299,6 @@
   padding: 1rem;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE и старый Edge */
-}
-
-.filters-content-title {
-  font-size: 1.3rem;
-  color: var(--primary-color);
-  font-weight: bold;
-  margin-bottom: 1rem;
-  text-align: center;
 }
 
 .filters-content::-webkit-scrollbar {
@@ -360,7 +352,7 @@
   color: var(--primary-color);
   font-weight: bold;
   padding: 0.5rem;
-  background-color: var(--card-bg-color);
+  background-color: var(--filter-bg-color);
 }
 
 .clear-all-filters.hidden {

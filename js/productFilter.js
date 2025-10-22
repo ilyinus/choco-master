@@ -4,31 +4,15 @@ const searchParams = new URLSearchParams(window.location.search)
 const curFilters = {}
 const elements = {}
 
-const tagsMap = {
-  dumplings: 'Пельмени',
-  '8-march': '8 марта',
-  'new-year': 'Новый год',
-  thematic: 'Тематические',
-  '23-febraury': '23 февраля',
-  easter: 'Пасха',
-  'teachers-day': 'День учителя',
-  'educator-day': 'День воспитателя',
-  '1-september': '1 сентября',
-  graduation: 'Выпускной',
-  'mather-day': 'День матери',
-  'hat-boxes': 'Шляпные коробки',
-  tulips: 'Тюльпаны'
-}
-
 function init() {
   bindelements()
   if (!searchParams.get('id')) {
-    elements.emptySvg.classList.add('hidden')
+    elements.emptyFilterButton.classList.add('hidden')
     addListeners()
   } else {
     hideFilterButton()
     hideFilterButtonActive()
-    elements.emptySvg.classList.remove('hidden')
+    elements.emptyFilterButton.classList.remove('hidden')
   }
 }
 
@@ -41,7 +25,7 @@ function bindelements() {
   elements.filtersApplyButton = document.getElementById('filters-apply-button')
   elements.clearAllFiltersButton = document.getElementById('clear-all-filters')
   elements.tags = Array.from(elements.filtersContent.getElementsByTagName('input'))
-  elements.emptySvg = document.getElementById('empty-svg')  
+  elements.emptyFilterButton = document.getElementById('empty-filter-button')  
 }
 
 function addListeners() {
@@ -53,35 +37,6 @@ function addListeners() {
   elements.closeBtn.addEventListener('click', closePannel)
   elements.filtersApplyButton.addEventListener('click', applyFilters)
   elements.clearAllFiltersButton.addEventListener('click', clearAllFilters)
-}
-
-function createFilters(node) {
-  const tags = {}
-  document.querySelectorAll('.product-card').forEach((card) => {
-    card.dataset.tags
-      .split(',')
-      .filter((tag) => tag !== '')
-      .forEach((tag) => {
-        tags[tag] = true
-      })
-  })
-  if (Object.keys(tags).length > 1) {
-    Object.keys(tags).forEach((tag) => {
-      const checkbox = document.createElement('input')
-      checkbox.classList.add('filter-toggle-checkbox')
-      checkbox.setAttribute('type', 'checkbox')
-      checkbox.setAttribute('id', 'filter-' + tag)
-      checkbox.dataset.tag = tag
-      node.appendChild(checkbox)
-
-      const label = document.createElement('label')
-      label.classList.add('filter-toggle-label')
-      label.setAttribute('for', 'filter-' + tag)
-      label.textContent = tagsMap[tag] || tag
-      label.dataset.tag = tag
-      node.appendChild(label)
-    })
-  }
 }
 
 function clearAllFilters() {
@@ -116,6 +71,7 @@ function closePannel(resetFilters = true) {
     showFilterButtonActive()
     hideFilterButton()
   } else {
+    hideClearAllFiltersButton()
     hideFilterButtonActive()
     showFilterButton()
   }

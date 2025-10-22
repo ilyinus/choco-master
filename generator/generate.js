@@ -16,25 +16,30 @@ const templates = {
   slideTemplate: fs.readFileSync(
     './templates/product/product-slide.html',
     'utf-8'
-  )
+  ),
+  filtersContentTemplate: fs.readFileSync('./templates/filters/filters-content.html', 'utf-8'),
+  switchFilterItemtTemplate: fs.readFileSync('./templates/filters/switch-filter-item.html', 'utf-8')
+}
+
+const tagsMap = {
+  dumplings: 'Пельмени',
+  '8-march': '8 марта',
+  'new-year': 'Новый год',
+  thematic: 'Тематические',
+  '23-febraury': '23 февраля',
+  easter: 'Пасха',
+  'teachers-day': 'День учителя',
+  'educator-day': 'День воспитателя',
+  '1-september': '1 сентября',
+  graduation: 'Выпускной',
+  'mather-day': 'День матери',
+  'hat-boxes': 'Шляпные коробки',
+  tulips: 'Тюльпаны'
 }
 
 const pageNameMap = {
   Коробки: 'boxes',
-  Букеты: 'bouquets',
-  Пельмени: 'dumplings',
-  '8 марта': '8-march',
-  'Новый год': 'new-year',
-  Тематические: 'thematic',
-  '23 февраля': '23-february',
-  Пасха: 'easter',
-  'День учителя': 'teachers-day',
-  'День воспитателя': 'educators-day',
-  '1 сентября': '1-september',
-  Выпускной: 'graduation',
-  'День матери': 'mather-day',
-  'Шляпные коробки': 'hat-boxes',
-  Тюльпаны: 'tulips'
+  Букеты: 'bouquets' 
 }
 
 function createCardHTML(card) {
@@ -56,6 +61,27 @@ function createCardHTML(card) {
   return card
 }
 
+function createFilters(cards) {
+  const tags = {}
+  cards.forEach(card => {
+    card.tags.forEach(tag => {
+      tags[tag] = tagsMap[tag]
+    })
+  })
+
+  let switches = ''
+  Object.keys(tags).forEach(key => {
+    switches += templates.switchFilterItemtTemplate
+      .replace('{{tag-name}}', tagsMap[key])
+      .replace('{{tag}}', key)
+  })
+
+  const filtersContent = templates.filtersContentTemplate    
+    .replace('{{switch-filter-items}}', switches)
+
+  return filtersContent
+}
+
 // генерируем страницу для каждой категории
 categories.forEach((category) => {
   const filtered = cards.filter((c) => c.categories.includes(category))
@@ -63,6 +89,7 @@ categories.forEach((category) => {
 
   const pageHTML = templates.pageTemplate
     .replaceAll('{{title}}', category)
+    .replace('{{filters}}', createFilters(filtered))
     .replace('{{cards}}', cardsHTML)
     .replace('{{pageName}}', pageNameMap[category])
 
