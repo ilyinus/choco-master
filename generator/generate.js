@@ -17,8 +17,14 @@ const templates = {
     './templates/product/product-slide.html',
     'utf-8'
   ),
-  filtersContentTemplate: fs.readFileSync('./templates/filters/filters-content.html', 'utf-8'),
-  switchFilterItemtTemplate: fs.readFileSync('./templates/filters/switch-filter-item.html', 'utf-8')
+  filtersContentTemplate: fs.readFileSync(
+    './templates/filters/filters-content.html',
+    'utf-8'
+  ),
+  switchFilterItemtTemplate: fs.readFileSync(
+    './templates/filters/switch-filter-item.html',
+    'utf-8'
+  )
 }
 
 const tagsMap = {
@@ -38,8 +44,8 @@ const tagsMap = {
 }
 
 const pageNameMap = {
-  Коробки: 'boxes',
-  Букеты: 'bouquets' 
+  Коробки: {pageName: 'boxes', pageTitle: 'Конфеты в коробоках'},
+  Букеты: {pageName: 'bouquets', pageTitle: 'Шоколадные букеты'}
 }
 
 function createCardHTML(card) {
@@ -63,21 +69,23 @@ function createCardHTML(card) {
 
 function createFilters(cards) {
   const tags = {}
-  cards.forEach(card => {
-    card.tags.forEach(tag => {
+  cards.forEach((card) => {
+    card.tags.forEach((tag) => {
       tags[tag] = tagsMap[tag]
     })
   })
 
   let switches = ''
-  Object.keys(tags).forEach(key => {
+  Object.keys(tags).forEach((key) => {
     switches += templates.switchFilterItemtTemplate
       .replace('{{tag-name}}', tagsMap[key])
       .replace('{{tag}}', key)
   })
 
-  const filtersContent = templates.filtersContentTemplate    
-    .replace('{{switch-filter-items}}', switches)
+  const filtersContent = templates.filtersContentTemplate.replace(
+    '{{switch-filter-items}}',
+    switches
+  )
 
   return filtersContent
 }
@@ -88,11 +96,15 @@ categories.forEach((category) => {
   const cardsHTML = filtered.map(createCardHTML).join('\n')
 
   const pageHTML = templates.pageTemplate
-    .replaceAll('{{title}}', category)
+    .replaceAll('{{title}}', pageNameMap[category]['pageTitle'])
     .replace('{{filters}}', createFilters(filtered))
     .replace('{{cards}}', cardsHTML)
-    .replace('{{pageName}}', pageNameMap[category])
+    .replace('{{pageName}}', pageNameMap[category]['pageName'])
 
-  fs.writeFileSync(`./.target/${pageNameMap[category]}.html`, pageHTML, 'utf-8')
+  fs.writeFileSync(
+    `./.target/${pageNameMap[category]['pageName']}.html`,
+    pageHTML,
+    'utf-8'
+  )
   console.log(`✅ Сгенерирована страница: ${category}.html`)
 })

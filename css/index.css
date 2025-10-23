@@ -69,10 +69,8 @@ a {
   display: none;
 }
 
-.subtitle {
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 4rem 0;
+.content {
+  animation: fadeIn 0.8s ease;
 }
 
 .category-block {
@@ -177,6 +175,22 @@ a {
   transform: translateY(0);
 }
 
+.page-title-container {
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+.page-title {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2rem;
+  color: var(--white-color);
+  background: linear-gradient(90deg, #5a3123 0%, #8b5a3c 100%);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
 @media (max-width: 480px) {
   .title {
     font-size: 2rem;
@@ -187,5 +201,23 @@ a {
   }
   .category-button {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .page-title {
+    font-size: 1.6rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

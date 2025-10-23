@@ -3,18 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Мастерская шоколада | Корзина</title>
+    <title>Корзина | Мастерская шоколада Санкт-Петербург</title>
 
     <!-- SEO -->
     <meta
       name="description"
-      content="Шоколад ручной работы в Санкт-Петербурге. Авторские коробки, конфеты, наборы для подарков. Закажите уникальные шоколадные изделия."
+      content="Авторский шоколад ручной работы в Санкт-Петербурге. Конфеты, шоколадные букеты и подарочные наборы из натуральных ингредиентов. Идеальный подарок к любому празднику!"
     />
-    <meta
-      name="keywords"
-      content="шоколад ручной работы, конфеты, подарочные наборы, Санкт-Петербург, мастерская шоколада"
-    />
-    <link rel="canonical" href="https://choco-master.ru/boxes.html" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://choco-master.ru/cart.html" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="Мастерская шоколада" />
@@ -53,12 +50,6 @@
     <link rel="preload" href="../css/index.css" as="style" />
     <link rel="preload" href="../css/cart.css" as="style" />
     <link rel="preload" href="../css/variables.css" as="style" />
-    <link rel="preload" href="../js/cartPage.js" as="script" />
-    <link
-      rel="preload"
-      href="../js/controller/orderController.js"
-      as="script"
-    />
 
     <!-- Шрифты -->
     <link
@@ -73,6 +64,25 @@
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/cart.css" />
     <link rel="stylesheet" href="../css/variables.css" />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Мастерская шоколада",
+        "url": "https://choco-master.ru",
+        "logo": "https://choco-master.ru/assets/preview-main.jpg",
+        "image": "https://choco-master.ru/assets/preview-main.jpg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "areaServed": "RU",
+          "availableLanguage": "Russian"
+        },
+        "sameAs": ["https://t.me/yourtelegram"]
+      }
+    </script>
   </head>
 
   <body>
