@@ -376,7 +376,6 @@
   background: rgba(0, 0, 0, 0.05);
 }
 
-/* Подпись */
 .label-text {
   font-size: 1.1rem;
   color: var(--primary-color);
@@ -384,7 +383,6 @@
   user-select: none;
 }
 
-/* Скрытый чекбокс */
 .switch input {
   display: none;
 }
@@ -413,7 +411,6 @@
   transition: transform 0.3s;
 }
 
-/* Активное состояние */
 .switch input:checked + .filter-slider {
   background-color: var(--bg-button-hover);
 }
