@@ -75,7 +75,12 @@
   gap: 1rem;
 }
 
-.cart-control-delete-button svg {
+.cart-control-delete-button {
+  display: flex;
+  align-items: center;
+}
+
+.cart-control-delete-button svg {  
   width: 30px;
   height: 30px;
   cursor: pointer;

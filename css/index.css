@@ -181,14 +181,19 @@ a {
 }
 
 .page-title {
-  display: inline-block;
+  /* display: inline-block;
   padding: 0.6rem 1.2rem;
   font-family: 'Great Vibes', cursive;
   font-size: 2.2rem;
   color: var(--white-color);
   background: linear-gradient(90deg, #5a3123 0%, #8b5a3c 100%);
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25); */
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  text-align: center;  
 }
 
 @media (max-width: 480px) {
@@ -205,9 +210,15 @@ a {
 }
 
 @media (max-width: 500px) {
+  .page-title-container {
+    margin: 0.5rem auto;
+  }
   .page-title {
     font-size: 1.6rem;
     padding: 0.4rem 0.8rem;
+  }
+  .header {
+    margin-bottom: 0.5rem;
   }
 }
 

@@ -1,19 +1,45 @@
 import eventBus from './eventDispatcher.js'
 
 const searchParams = new URLSearchParams(window.location.search)
+const curPage = window.location.protocol + '//' + window.location.host + window.location.pathname
 const curFilters = {}
 const elements = {}
 
 function init() {
   bindelements()
-  if (!searchParams.get('id')) {
-    elements.emptyFilterButton.classList.add('hidden')
-    addListeners()
-  } else {
+
+  if (searchParams.get('id')) {
     hideFilterButton()
     hideFilterButtonActive()
-    elements.emptyFilterButton.classList.remove('hidden')
+    showFilterButtonEmpty()
+    return
+  } else {
+    hideFilterButtonEmpty()
   }
+
+  addListeners()  
+  initCurFilters()
+
+  if (isFiltersSet()) {
+    hideFilterButton()
+    showFilterButtonActive()
+    applyFilters()
+  }
+}
+
+function initCurFilters() {
+  curFilters.tags = []
+  const tagsParams = searchParams.get('tags')?.split(',') || []
+  
+  tagsParams.forEach(tag => {
+    curFilters.tags[tag] = true
+  })
+
+  elements.tags.forEach(tag => {
+    if (curFilters.tags[tag.dataset.filterTag]) {
+      tag.checked = true
+    }
+  })
 }
 
 function bindelements() {
@@ -21,11 +47,12 @@ function bindelements() {
   elements.filtersContent = document.getElementById('filters-content')
   elements.filterButton = document.getElementById('filter-button')
   elements.filterButtonActive = document.getElementById('filter-button-active')
+  elements.filterButtonEmpty = document.getElementById('filter-button-empty')
   elements.closeBtn = document.getElementById('close-filters')
-  elements.filtersApplyButton = document.getElementById('filters-apply-button')
+  elements.filterButtonApply = document.getElementById('filters-apply-button')
   elements.clearAllFiltersButton = document.getElementById('clear-all-filters')
   elements.tags = Array.from(elements.filtersContent.getElementsByTagName('input'))
-  elements.emptyFilterButton = document.getElementById('empty-filter-button')  
+  elements.emptyFilterButton = document.getElementById('empty-filter-button')
 }
 
 function addListeners() {
@@ -34,68 +61,53 @@ function addListeners() {
   })
   elements.filterButton.addEventListener('click', openPannel)
   elements.filterButtonActive.addEventListener('click', openPannel)
-  elements.closeBtn.addEventListener('click', closePannel)
-  elements.filtersApplyButton.addEventListener('click', applyFilters)
+  elements.filterButtonApply.addEventListener('click', updateFilters)
+  elements.closeBtn.addEventListener('click', closePannel)  
   elements.clearAllFiltersButton.addEventListener('click', clearAllFilters)
 }
 
 function clearAllFilters() {
-  curFilters.tags = {}
-  closePannel()
-  hideClearAllFiltersButton()
-  eventBus.dispatch('filters:update', {tags: []})
+  window.location.href = curPage
+}
+
+function updateFilters() {
+  const searchParams = []
+  elements.tags.forEach(input => {    
+    if (input.checked) {      
+      searchParams.push(input.dataset.filterTag)
+    }    
+  })  
+  if (searchParams.length > 0) {
+    window.location.href = curPage + "?tags=" + searchParams.join(',')
+  } else {
+    window.location.href = curPage
+  }
 }
 
 function applyFilters() {
   const tags = []
-  elements.tags.forEach(input => {        
-    if (input.checked) {
-      tags.push(input.dataset.filterTag)      
+  elements.tags.forEach(tag => {        
+    if (tag.checked) {
+      tags.push(tag.dataset.filterTag)
     }
-    curFilters.tags[input.dataset.filterTag] = input.checked
-  })  
-  closePannel(false)  
-  eventBus.dispatch('filters:update', {tags})
+  })
+  eventBus.dispatch('filters:update', {tags})  
 }
 
-function closePannel(resetFilters = true) {
+function closePannel() {
   elements.overlay.classList.add('hidden')
-  if (resetFilters) {    
-    elements.tags.forEach(tag => {
-      if (tag.dataset.filterTag) {        
-        tag.checked = curFilters.tags[tag.dataset.filterTag]
-      }
-    })
-  }
-  if (isFiltersSet()) {
-    showFilterButtonActive()
-    hideFilterButton()
-  } else {
-    hideClearAllFiltersButton()
-    hideFilterButtonActive()
-    showFilterButton()
-  }
+  elements.tags.forEach(tag => {    
+    tag.checked = curFilters.tags[tag.dataset.filterTag]    
+  })
   unlockPageScroll()
 }
 
 function openPannel() {
-  elements.overlay.classList.remove('hidden')
-  fillCurTags()
-  lockPageScroll()
-}
-
-function fillCurTags() {
-  curFilters.tags = {}
-  let tagsExists = false
-  elements.tags.forEach(tag => {
-    if (tag.dataset.filterTag) {
-      curFilters.tags[tag.dataset.filterTag] = tag.checked
-      tagsExists = tagsExists || tag.checked
-    }
-  })  
-  if (tagsExists) {
+  elements.overlay.classList.remove('hidden')  
+  if (isFiltersSet()) {
     showClearAllFiltersButton()
   }
+  lockPageScroll()
 }
 
 function isFiltersSet() {
@@ -120,12 +132,12 @@ function hideClearAllFiltersButton() {
   elements.clearAllFiltersButton.classList.add('hidden')
 }
 
-function showFilterButtonActive() {  
-  elements.filterButtonActive.classList.remove('hidden')
+function hideFilterButtonEmpty() {
+  elements.filterButtonEmpty.classList.add('hidden')
 }
 
-function hideFilterButtonActive() {
-  elements.filterButtonActive.classList.add('hidden')
+function showFilterButtonEmpty() {
+  elements.filterButtonEmpty.classList.remove('hidden')
 }
 
 function showFilterButton() {
@@ -134,6 +146,14 @@ function showFilterButton() {
 
 function hideFilterButton() {
   elements.filterButton.classList.add('hidden')
+}
+
+function showFilterButtonActive() {  
+  elements.filterButtonActive.classList.remove('hidden')
+}
+
+function hideFilterButtonActive() {
+  elements.filterButtonActive.classList.add('hidden')
 }
 
 init()

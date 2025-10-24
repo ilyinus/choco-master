@@ -56,8 +56,12 @@ class CartPage {
 
     this.backLink.addEventListener('click', (e) => {
       e.preventDefault()
-      const lastPage = sessionStorage.getItem('lastPage')
-      window.location.href = lastPage || '/index.html'
+      const lastPage = sessionStorage.getItem('lastPage')      
+      if (lastPage.indexOf('id=') != -1) {
+        window.location.href = lastPage.substring(0, lastPage.indexOf('?'))
+      } else {
+        window.location.href = lastPage || '/index.html'
+      }
     })
 
     this.orderForm.addEventListener('submit', (e) => {
@@ -123,8 +127,8 @@ class CartPage {
 
   saveReferrer() {
     if (document.referrer && !document.referrer.includes('cart.html')) {
-      const url = new URL(document.referrer)
-      sessionStorage.setItem('lastPage', url.origin + url.pathname)
+      const url = new URL(document.referrer)      
+      sessionStorage.setItem('lastPage', url.origin + url.pathname + url.search)
     }
   }
 }
