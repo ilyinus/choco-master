@@ -128,7 +128,7 @@ export default class Modal {
     // document.documentElement.classList.add('lock-scroll')
     // document.body.classList.add('lock-scroll')
     // document.body.style.top = `-${scrollY}px`
-    document.querySelector('.container').classList.add('scroll-lock')
+    // document.querySelector('.container').classList.add('scroll-lock')
   }
 
   unlockScroll() {
@@ -136,7 +136,7 @@ export default class Modal {
     // document.body.classList.remove('lock-scroll')
     // document.body.style.top = ''
     // window.scrollTo(0, scrollY)
-    document.querySelector('.container').classList.remove('scroll-lock')
+    // document.querySelector('.container').classList.remove('scroll-lock')
   }
 
   addListeners() {

@@ -13,7 +13,7 @@ body {
   overflow-x: hidden;
 }
 
-.container {
+/* .container {
   position: relative;
 }
 
@@ -23,7 +23,7 @@ body {
   left: 0;
   right: 0;
   overflow: hidden;
-}
+} */
 
 /* html.lock-scroll,
 body.lock-scroll {
