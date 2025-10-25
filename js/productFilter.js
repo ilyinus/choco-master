@@ -160,10 +160,12 @@ function clearAllFilters() {
 /* ---------- Helpers ---------- */
 
 function lockScroll() {
+  document.documentElement.classList.toggle('lock-scroll')
   document.body.classList.add('lock-scroll')
 }
 
 function unlockScroll() {
+  document.documentElement.classList.toggle('lock-scroll')
   document.body.classList.remove('lock-scroll')
 }
 
