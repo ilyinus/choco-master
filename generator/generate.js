@@ -38,9 +38,11 @@ const tagsMap = {
   'educator-day': 'День воспитателя',
   '1-september': '1 сентября',
   graduation: 'Выпускной',
-  'mather-day': 'День матери',
+  'mothers-day': 'День матери',
   'hat-boxes': 'Шляпные коробки',
-  tulips: 'Тюльпаны'
+  tulips: 'Тюльпаны',
+  roses: 'Розы',
+  peonies: 'Пионы'
 }
 
 const pageNameMap = {
