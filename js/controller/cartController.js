@@ -26,6 +26,10 @@ class CartController {
       const {id} = e.detail
       this.removeItem(id)
     })
+    eventBus.subscribe('cart:removeAllItems', (e) => {
+      const {id} = e.detail
+      this.removeAllItems(id)
+    })
     eventBus.subscribe('cart:clear', () => {
       this.clear()
     })
@@ -56,6 +60,14 @@ class CartController {
   removeItem(id) {
     if (this.items[id]) {
       this.items[id].count -= 1
+      this.saveToStorage()
+      this.dispatchUpdate(id)
+    }
+  }
+
+  removeAllItems(id) {
+    if (this.items[id]) {
+      delete this.items[id]
       this.saveToStorage()
       this.dispatchUpdate(id)
     }
@@ -92,7 +104,7 @@ class CartController {
 
   updateCartBadge() {
     if (this.badge) {
-      const count = this.getTotalCount()      
+      const count = this.getTotalCount()
       this.badge.classList.toggle('hidden', count === 0)
       this.badge.innerText = count
     }

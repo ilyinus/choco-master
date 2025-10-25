@@ -1,4 +1,9 @@
-<div class="product-card" id="product-{{id}}" data-categories="{{categories}}">
+<div
+  class="product-card"
+  id="product-{{id}}"
+  data-categories="{{categories}}"
+  data-tags="{{tags}}"
+>
   <div class="slider">
     <div class="slides">{{slides}}</div>
     <button class="prev-btn">‹</button>
@@ -6,13 +11,19 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="{{price}}">{{price}}&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="{{name}}">{{name}}</h2>    
+    <div class="product-card-price" data-price="{{price}}">
+      {{price}}&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="{{name}}">{{name}}</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>

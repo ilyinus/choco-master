@@ -1,6 +1,9 @@
 :root {
-  --primary-color: #5a3123;  
+  --primary-color: #5a3123;
   --white-color: #ffffff;
   --card-bg-color: #ddcba4;
-  --border-radius: 10px;  
+  --filter-bg-color: var(--card-bg-color);  
+  --border-radius: 10px;
+  --bg-button: #8e5a33;
+  --bg-button-hover: #734529;
 }

@@ -4,22 +4,20 @@
     <!-- Базовые настройки -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Мастерская шоколада | Коробки</title>
+    <title>Конфеты в коробоках | Мастерская шоколада</title>
 
     <!-- SEO -->
     <meta
       name="description"
-      content="Шоколад ручной работы в Санкт-Петербурге. Авторские коробки, конфеты, наборы для подарков. Закажите уникальные шоколадные изделия."
+      content="Подарочные коробки из шоколада ручной работы в Санкт-Петербурге. Авторские наборы и сладкие композиции от Мастерской шоколада."
     />
-    <meta
-      name="keywords"
-      content="шоколад ручной работы, конфеты, подарочные наборы, Санкт-Петербург, мастерская шоколада"
-    />
+
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://choco-master.ru/boxes.html" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="Мастерская шоколада" />
+    <meta property="og:site_name" content="Мастерская шоколада" />
     <meta
       property="og:description"
       content="Авторский шоколад ручной работы в Санкт-Петербурге. Подарки и наборы к любому празднику."
@@ -45,8 +43,8 @@
     />
 
     <!-- Favicon -->
-    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="/assets/preview-main.jpg" />
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../assets/preview-main.jpg" />
 
     <!-- Оптимизация загрузки -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -55,7 +53,6 @@
     <link rel="preload" href="../css/index.css" as="style" />
     <link rel="preload" href="../css/product.css" as="style" />
     <link rel="preload" href="../css/variables.css" as="style" />
-    <link rel="preload" href="../js/productPage.js" as="script" />
 
     <!-- Шрифты -->
     <link
@@ -71,6 +68,25 @@
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/product.css" />
     <link rel="stylesheet" href="../css/variables.css" />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Мастерская шоколада",
+        "url": "https://choco-master.ru",
+        "logo": "https://choco-master.ru/assets/preview-main.jpg",
+        "image": "https://choco-master.ru/assets/preview-main.jpg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "areaServed": "RU",
+          "availableLanguage": "Russian"
+        },
+        "sameAs": ["https://t.me/the_jees"]
+      }
+    </script>
   </head>
 
   <body>
@@ -83,15 +99,130 @@
       <span class="modal-close-button">&times;</span>
     </div>
 
+    <!-- Фильтры -->
+    <div class="filters-overlay hidden" id="filters-overlay">
+      <section class="filters-panel">
+        <button class="filters-close" id="close-filters">&times;</button>
+        <button class="clear-all-filters hidden" id="clear-all-filters">
+          Сбросить фильтры &times;
+        </button>
+        <div class="filters-content" id="filters-content">
+    <label class="switch">
+    <span class="label-text">Пельмени</span>
+    <input type="checkbox" data-filter-tag="dumplings"/>
+    <span class="filter-slider"></span>
+</label><label class="switch">
+    <span class="label-text">8 марта</span>
+    <input type="checkbox" data-filter-tag="8-march"/>
+    <span class="filter-slider"></span>
+</label><label class="switch">
+    <span class="label-text">Новый год</span>
+    <input type="checkbox" data-filter-tag="new-year"/>
+    <span class="filter-slider"></span>
+</label><label class="switch">
+    <span class="label-text">Тематические</span>
+    <input type="checkbox" data-filter-tag="thematic"/>
+    <span class="filter-slider"></span>
+</label><label class="switch">
+    <span class="label-text">23 февраля</span>
+    <input type="checkbox" data-filter-tag="23-febraury"/>
+    <span class="filter-slider"></span>
+</label><label class="switch">
+    <span class="label-text">Пасха</span>
+    <input type="checkbox" data-filter-tag="easter"/>
+    <span class="filter-slider"></span>
+</label><label class="switch">
+    <span class="label-text">День учителя</span>
+    <input type="checkbox" data-filter-tag="teachers-day"/>
+    <span class="filter-slider"></span>
+</label><label class="switch">
+    <span class="label-text">День воспитателя</span>
+    <input type="checkbox" data-filter-tag="educator-day"/>
+    <span class="filter-slider"></span>
+</label><label class="switch">
+    <span class="label-text">1 сентября</span>
+    <input type="checkbox" data-filter-tag="1-september"/>
+    <span class="filter-slider"></span>
+</label><label class="switch">
+    <span class="label-text">Выпускной</span>
+    <input type="checkbox" data-filter-tag="graduation"/>
+    <span class="filter-slider"></span>
+</label><label class="switch">
+    <span class="label-text">День матери</span>
+    <input type="checkbox" data-filter-tag="mothers-day"/>
+    <span class="filter-slider"></span>
+</label><label class="switch">
+    <span class="label-text">Шляпные коробки</span>
+    <input type="checkbox" data-filter-tag="hat-boxes"/>
+    <span class="filter-slider"></span>
+</label><label class="switch">
+    <span class="label-text">Тюльпаны</span>
+    <input type="checkbox" data-filter-tag="tulips"/>
+    <span class="filter-slider"></span>
+</label><label class="switch">
+    <span class="label-text">Пионы</span>
+    <input type="checkbox" data-filter-tag="peonies"/>
+    <span class="filter-slider"></span>
+</label><label class="switch">
+    <span class="label-text">Розы</span>
+    <input type="checkbox" data-filter-tag="roses"/>
+    <span class="filter-slider"></span>
+</label>
+</div>
+        <button class="filters-apply-button" id="filters-apply-button">
+          Применить
+        </button>
+      </section>
+    </div>
+
     <div class="container">
       <header class="header">
-        <a href="https://t.me/your_username" target="_blank">
-          <svg viewBox="0 0 24 24" fill="#ffffff">
+        <div class="filter-button" id="filter-button">
+          <svg viewBox="0 0 24 24" stroke="#ffffff">
             <path
-              d="M23.1117 4.49449C23.4296 2.94472 21.9074 1.65683 20.4317 2.227L2.3425 9.21601C0.694517 9.85273 0.621087 12.1572 2.22518 12.8975L6.1645 14.7157L8.03849 21.2746C8.13583 21.6153 8.40618 21.8791 8.74917 21.968C9.09216 22.0568 9.45658 21.9576 9.70712 21.707L12.5938 18.8203L16.6375 21.8531C17.8113 22.7334 19.5019 22.0922 19.7967 20.6549L23.1117 4.49449ZM3.0633 11.0816L21.1525 4.0926L17.8375 20.2531L13.1 16.6999C12.7019 16.4013 12.1448 16.4409 11.7929 16.7928L10.5565 18.0292L10.928 15.9861L18.2071 8.70703C18.5614 8.35278 18.5988 7.79106 18.2947 7.39293C17.9906 6.99479 17.4389 6.88312 17.0039 7.13168L6.95124 12.876L3.0633 11.0816ZM8.17695 14.4791L8.78333 16.6015L9.01614 15.321C9.05253 15.1209 9.14908 14.9366 9.29291 14.7928L11.5128 12.573L8.17695 14.4791Z"
-            />
+              d="M15 10.5A3.502 3.502 0 0 0 18.355 8H21a1 1 0 1 0 0-2h-2.645a3.502 3.502 0 0 0-6.71 0H3a1 1 0 0 0 0 2h8.645A3.502 3.502 0 0 0 15 10.5zM3 16a1 1 0 1 0 0 2h2.145a3.502 3.502 0 0 0 6.71 0H21a1 1 0 1 0 0-2h-9.145a3.502 3.502 0 0 0-6.71 0H3z"
+              fill="#ffffff"
+            ></path>
           </svg>
-        </a>
+        </div>
+        <div class="filter-button-active hidden" id="filter-button-active">
+          <svg
+            viewBox="-2.4 -2.4 28.80 28.80"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="#5a3123"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0">
+              <rect
+                x="-2.4"
+                y="-2.4"
+                width="28.80"
+                height="28.80"
+                rx="14.4"
+                fill="#ffffff"
+                strokewidth="0"
+              ></rect>
+            </g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M15 10.5A3.502 3.502 0 0 0 18.355 8H21a1 1 0 1 0 0-2h-2.645a3.502 3.502 0 0 0-6.71 0H3a1 1 0 0 0 0 2h8.645A3.502 3.502 0 0 0 15 10.5zM3 16a1 1 0 1 0 0 2h2.145a3.502 3.502 0 0 0 6.71 0H21a1 1 0 1 0 0-2h-9.145a3.502 3.502 0 0 0-6.71 0H3z"
+                fill="#5a3123"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="empty-svg hidden" id="filter-button-empty">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path />
+          </svg>
+        </div>
         <a href="../index.html"><div class="title">Мастерская шоколада</div></a>
         <a class="cart-link" href="cart.html">
           <svg viewBox="0 0 24 24" fill="none">
@@ -105,13 +236,22 @@
           </svg>
           <div class="cart-badge hidden">0</div>
         </a>
-      </header>    
+      </header>
+
+      <!-- Заголовок страницы -->
+      <div class="page-title-container">
+        <div class="page-title">Конфеты в коробоках</div>
+      </div>
 
       <!-- Основной контент -->
-      <main class="content">            
-        <div class="show-all-button-wrapper"></div>
+      <main class="content fade-in">
         <!-- Сетка продуктов -->
-        <div class="product-grid"><div class="product-card" id="product-1" data-categories="Коробки,Пельмени">
+        <div class="product-grid"><div
+  class="product-card"
+  id="product-1"
+  data-categories="Коробки"
+  data-tags="dumplings"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/1/1.jpg" loading="lazy" class="product-image" alt="Пельмени в коробке 9шт." />
@@ -122,18 +262,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="690">690&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Пельмени в коробке 9шт.">Пельмени в коробке 9шт.</h2>    
+    <div class="product-card-price" data-price="690">
+      690&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Пельмени в коробке 9шт.">Пельмени в коробке 9шт.</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-2" data-categories="Коробки">
+<div
+  class="product-card"
+  id="product-2"
+  data-categories="Коробки"
+  data-tags=""
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/2/1.jpg" loading="lazy" class="product-image" alt="Коробка конфет на 16 ячеек. с мишкой" />
@@ -147,18 +298,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="1590">1590&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка конфет на 16 ячеек. с мишкой">Коробка конфет на 16 ячеек. с мишкой</h2>    
+    <div class="product-card-price" data-price="1590">
+      1590&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка конфет на 16 ячеек. с мишкой">Коробка конфет на 16 ячеек. с мишкой</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-3" data-categories="Коробки">
+<div
+  class="product-card"
+  id="product-3"
+  data-categories="Коробки"
+  data-tags=""
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/3/1.jpg" loading="lazy" class="product-image" alt="Пенал на 5 конфет" />
@@ -169,18 +331,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="790">790&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Пенал на 5 конфет">Пенал на 5 конфет</h2>    
+    <div class="product-card-price" data-price="790">
+      790&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Пенал на 5 конфет">Пенал на 5 конфет</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-4" data-categories="Коробки,8 марта">
+<div
+  class="product-card"
+  id="product-4"
+  data-categories="Коробки"
+  data-tags="8-march"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/4/1.jpg" loading="lazy" class="product-image" alt="Коробка конфет 8 марта с плиткой" />
@@ -191,18 +364,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="1690">1690&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка конфет 8 марта с плиткой">Коробка конфет 8 марта с плиткой</h2>    
+    <div class="product-card-price" data-price="1690">
+      1690&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка конфет 8 марта с плиткой">Коробка конфет 8 марта с плиткой</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-5" data-categories="Коробки,Новый год">
+<div
+  class="product-card"
+  id="product-5"
+  data-categories="Коробки"
+  data-tags="new-year"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/5/1.jpg" loading="lazy" class="product-image" alt="Коробка конфет Новый год" />
@@ -213,18 +397,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="1690">1690&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка конфет Новый год">Коробка конфет Новый год</h2>    
+    <div class="product-card-price" data-price="1690">
+      1690&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка конфет Новый год">Коробка конфет Новый год</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-6" data-categories="Коробки,Новый год">
+<div
+  class="product-card"
+  id="product-6"
+  data-categories="Коробки"
+  data-tags="new-year"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/6/1.jpg" loading="lazy" class="product-image" alt="Коробка конфет Новый год" />
@@ -235,18 +430,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="990">990&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка конфет Новый год">Коробка конфет Новый год</h2>    
+    <div class="product-card-price" data-price="990">
+      990&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка конфет Новый год">Коробка конфет Новый год</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-7" data-categories="Коробки,Новый год">
+<div
+  class="product-card"
+  id="product-7"
+  data-categories="Коробки"
+  data-tags="new-year"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/7/1.jpg" loading="lazy" class="product-image" alt="Пенал Новый год" />
@@ -257,18 +463,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="790">790&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Пенал Новый год">Пенал Новый год</h2>    
+    <div class="product-card-price" data-price="790">
+      790&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Пенал Новый год">Пенал Новый год</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-8" data-categories="Коробки,Новый год">
+<div
+  class="product-card"
+  id="product-8"
+  data-categories="Коробки"
+  data-tags="new-year"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/8/1.jpg" loading="lazy" class="product-image" alt="Новогодняя коробка на 12 ячеек" />
@@ -279,18 +496,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="1390">1390&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Новогодняя коробка на 12 ячеек">Новогодняя коробка на 12 ячеек</h2>    
+    <div class="product-card-price" data-price="1390">
+      1390&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Новогодняя коробка на 12 ячеек">Новогодняя коробка на 12 ячеек</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-9" data-categories="Коробки,Тематические">
+<div
+  class="product-card"
+  id="product-9"
+  data-categories="Коробки"
+  data-tags="thematic"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/9/1.jpg" loading="lazy" class="product-image" alt="Коробка тематическая 16 ячеек" />
@@ -301,18 +529,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="1890">1890&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка тематическая 16 ячеек">Коробка тематическая 16 ячеек</h2>    
+    <div class="product-card-price" data-price="1890">
+      1890&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка тематическая 16 ячеек">Коробка тематическая 16 ячеек</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-10" data-categories="Коробки">
+<div
+  class="product-card"
+  id="product-10"
+  data-categories="Коробки"
+  data-tags=""
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/10/1.jpg" loading="lazy" class="product-image" alt="Коробка конфет на 9 ячеек" />
@@ -323,18 +562,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="990">990&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка конфет на 9 ячеек">Коробка конфет на 9 ячеек</h2>    
+    <div class="product-card-price" data-price="990">
+      990&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка конфет на 9 ячеек">Коробка конфет на 9 ячеек</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-11" data-categories="Коробки,Тематические">
+<div
+  class="product-card"
+  id="product-11"
+  data-categories="Коробки"
+  data-tags="thematic"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/11/1.jpg" loading="lazy" class="product-image" alt="Коробка тематическая 16 ячеек" />
@@ -345,18 +595,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="1690">1690&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка тематическая 16 ячеек">Коробка тематическая 16 ячеек</h2>    
+    <div class="product-card-price" data-price="1690">
+      1690&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка тематическая 16 ячеек">Коробка тематическая 16 ячеек</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-12" data-categories="Коробки,23 февраля">
+<div
+  class="product-card"
+  id="product-12"
+  data-categories="Коробки"
+  data-tags="23-febraury"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/12/1.jpg" loading="lazy" class="product-image" alt="Коробка конфет 23 февраля" />
@@ -367,18 +628,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="990">990&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка конфет 23 февраля">Коробка конфет 23 февраля</h2>    
+    <div class="product-card-price" data-price="990">
+      990&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка конфет 23 февраля">Коробка конфет 23 февраля</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-13" data-categories="Коробки,8 марта">
+<div
+  class="product-card"
+  id="product-13"
+  data-categories="Коробки"
+  data-tags="8-march"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/13/1.jpg" loading="lazy" class="product-image" alt="Коробка конфет 8 марта" />
@@ -389,18 +661,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="1390">1390&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка конфет 8 марта">Коробка конфет 8 марта</h2>    
+    <div class="product-card-price" data-price="1390">
+      1390&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка конфет 8 марта">Коробка конфет 8 марта</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-14" data-categories="Коробки">
+<div
+  class="product-card"
+  id="product-14"
+  data-categories="Коробки"
+  data-tags=""
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/14/1.jpg" loading="lazy" class="product-image" alt="Коробка конфет на 5 ячеек" />
@@ -411,18 +694,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="790">790&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка конфет на 5 ячеек">Коробка конфет на 5 ячеек</h2>    
+    <div class="product-card-price" data-price="790">
+      790&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка конфет на 5 ячеек">Коробка конфет на 5 ячеек</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-15" data-categories="Коробки,Пасха">
+<div
+  class="product-card"
+  id="product-15"
+  data-categories="Коробки"
+  data-tags="easter"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/15/1.jpg" loading="lazy" class="product-image" alt="Пасхальная композиции с зайчиком" />
@@ -436,18 +730,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="990">990&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Пасхальная композиции с зайчиком">Пасхальная композиции с зайчиком</h2>    
+    <div class="product-card-price" data-price="990">
+      990&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Пасхальная композиции с зайчиком">Пасхальная композиции с зайчиком</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-16" data-categories="Коробки,День учителя,День воспитателя,1 сентября,Выпускной">
+<div
+  class="product-card"
+  id="product-16"
+  data-categories="Коробки"
+  data-tags="teachers-day,educator-day,1-september,graduation"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/16/1.jpg" loading="lazy" class="product-image" alt="Коробка на 12 ячеек с зайчиком" />
@@ -458,18 +763,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="1390">1390&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка на 12 ячеек с зайчиком">Коробка на 12 ячеек с зайчиком</h2>    
+    <div class="product-card-price" data-price="1390">
+      1390&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка на 12 ячеек с зайчиком">Коробка на 12 ячеек с зайчиком</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-17" data-categories="Коробки,День учителя,1 сентября">
+<div
+  class="product-card"
+  id="product-17"
+  data-categories="Коробки"
+  data-tags="teachers-day,1-september"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/17/1.jpg" loading="lazy" class="product-image" alt="Коробка конфет на день учителя" />
@@ -480,18 +796,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="1590">1590&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка конфет на день учителя">Коробка конфет на день учителя</h2>    
+    <div class="product-card-price" data-price="1590">
+      1590&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка конфет на день учителя">Коробка конфет на день учителя</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-18" data-categories="Коробки,1 сентября">
+<div
+  class="product-card"
+  id="product-18"
+  data-categories="Коробки"
+  data-tags="1-september"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/18/1.jpg" loading="lazy" class="product-image" alt="Коробка конфет 1 сентярбря" />
@@ -502,18 +829,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="1590">1590&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка конфет 1 сентярбря">Коробка конфет 1 сентярбря</h2>    
+    <div class="product-card-price" data-price="1590">
+      1590&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка конфет 1 сентярбря">Коробка конфет 1 сентярбря</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-19" data-categories="Коробки,1 сентября,День учителя">
+<div
+  class="product-card"
+  id="product-19"
+  data-categories="Коробки"
+  data-tags="teachers-day,1-september"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/19/1.jpg" loading="lazy" class="product-image" alt="Пенал день учителя, 1 сентября" />
@@ -524,18 +862,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="790">790&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Пенал день учителя, 1 сентября">Пенал день учителя, 1 сентября</h2>    
+    <div class="product-card-price" data-price="790">
+      790&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Пенал день учителя, 1 сентября">Пенал день учителя, 1 сентября</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-20" data-categories="Коробки,1 сентября,День учителя">
+<div
+  class="product-card"
+  id="product-20"
+  data-categories="Коробки"
+  data-tags="teachers-day,1-september"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/20/1.jpg" loading="lazy" class="product-image" alt="Коробка на 9 ячеек" />
@@ -546,18 +895,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="990">990&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка на 9 ячеек">Коробка на 9 ячеек</h2>    
+    <div class="product-card-price" data-price="990">
+      990&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка на 9 ячеек">Коробка на 9 ячеек</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-21" data-categories="Коробки,1 сентября,День учителя">
+<div
+  class="product-card"
+  id="product-21"
+  data-categories="Коробки"
+  data-tags="teachers-day,1-september"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/21/1.jpg" loading="lazy" class="product-image" alt="Коробка на 9 ячеек с мишкой и совенком" />
@@ -568,18 +928,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="990">990&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка на 9 ячеек с мишкой и совенком">Коробка на 9 ячеек с мишкой и совенком</h2>    
+    <div class="product-card-price" data-price="990">
+      990&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка на 9 ячеек с мишкой и совенком">Коробка на 9 ячеек с мишкой и совенком</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-22" data-categories="Коробки,1 сентября,День учителя">
+<div
+  class="product-card"
+  id="product-22"
+  data-categories="Коробки"
+  data-tags="teachers-day,1-september"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/22/1.jpg" loading="lazy" class="product-image" alt="Коробка на 9 ячеек с совенком" />
@@ -590,18 +961,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="990">990&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка на 9 ячеек с совенком">Коробка на 9 ячеек с совенком</h2>    
+    <div class="product-card-price" data-price="990">
+      990&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка на 9 ячеек с совенком">Коробка на 9 ячеек с совенком</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-23" data-categories="Коробки,Тематические">
+<div
+  class="product-card"
+  id="product-23"
+  data-categories="Коробки"
+  data-tags="thematic"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/23/1.jpg" loading="lazy" class="product-image" alt="Коробка на 25 конфет" />
@@ -612,18 +994,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="1990">1990&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка на 25 конфет">Коробка на 25 конфет</h2>    
+    <div class="product-card-price" data-price="1990">
+      1990&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка на 25 конфет">Коробка на 25 конфет</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-24" data-categories="Коробки,День матери">
+<div
+  class="product-card"
+  id="product-24"
+  data-categories="Коробки"
+  data-tags="mothers-day"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/24/1.jpg" loading="lazy" class="product-image" alt="Коробка на 9 конфет, Маме" />
@@ -634,18 +1027,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="990">990&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка на 9 конфет, Маме">Коробка на 9 конфет, Маме</h2>    
+    <div class="product-card-price" data-price="990">
+      990&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка на 9 конфет, Маме">Коробка на 9 конфет, Маме</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-25" data-categories="Коробки,День матери">
+<div
+  class="product-card"
+  id="product-25"
+  data-categories="Коробки"
+  data-tags="mothers-day"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/25/1.jpg" loading="lazy" class="product-image" alt="Коробка на 16 конфет, Маме" />
@@ -656,18 +1060,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="1590">1590&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка на 16 конфет, Маме">Коробка на 16 конфет, Маме</h2>    
+    <div class="product-card-price" data-price="1590">
+      1590&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка на 16 конфет, Маме">Коробка на 16 конфет, Маме</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-26" data-categories="Коробки,День матери">
+<div
+  class="product-card"
+  id="product-26"
+  data-categories="Коробки"
+  data-tags="mothers-day"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/26/1.jpg" loading="lazy" class="product-image" alt="Коробка на 9 конфет, Маме" />
@@ -678,18 +1093,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="990">990&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка на 9 конфет, Маме">Коробка на 9 конфет, Маме</h2>    
+    <div class="product-card-price" data-price="990">
+      990&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка на 9 конфет, Маме">Коробка на 9 конфет, Маме</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-27" data-categories="Коробки,День матери">
+<div
+  class="product-card"
+  id="product-27"
+  data-categories="Коробки"
+  data-tags="mothers-day"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/27/1.jpg" loading="lazy" class="product-image" alt="Коробка на 16 конфет, Маме" />
@@ -700,18 +1126,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="1590">1590&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка на 16 конфет, Маме">Коробка на 16 конфет, Маме</h2>    
+    <div class="product-card-price" data-price="1590">
+      1590&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка на 16 конфет, Маме">Коробка на 16 конфет, Маме</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-28" data-categories="Коробки">
+<div
+  class="product-card"
+  id="product-28"
+  data-categories="Коробки"
+  data-tags=""
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/28/1.jpg" loading="lazy" class="product-image" alt="Композиция в коробке" />
@@ -731,18 +1168,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="1590">1590&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Композиция в коробке">Композиция в коробке</h2>    
+    <div class="product-card-price" data-price="1590">
+      1590&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Композиция в коробке">Композиция в коробке</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-29" data-categories="Коробки">
+<div
+  class="product-card"
+  id="product-29"
+  data-categories="Коробки"
+  data-tags=""
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/29/1.jpg" loading="lazy" class="product-image" alt="Коробка на 9 ячеек с мишкой" />
@@ -753,18 +1201,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="990">990&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка на 9 ячеек с мишкой">Коробка на 9 ячеек с мишкой</h2>    
+    <div class="product-card-price" data-price="990">
+      990&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка на 9 ячеек с мишкой">Коробка на 9 ячеек с мишкой</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-30" data-categories="Коробки">
+<div
+  class="product-card"
+  id="product-30"
+  data-categories="Коробки"
+  data-tags=""
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/30/1.jpg" loading="lazy" class="product-image" alt="Коробка на 16 конфет с мишкой" />
@@ -775,18 +1234,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="1590">1590&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка на 16 конфет с мишкой">Коробка на 16 конфет с мишкой</h2>    
+    <div class="product-card-price" data-price="1590">
+      1590&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка на 16 конфет с мишкой">Коробка на 16 конфет с мишкой</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-31" data-categories="Коробки,Новый год">
+<div
+  class="product-card"
+  id="product-31"
+  data-categories="Коробки"
+  data-tags="new-year"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/31/1.jpg" loading="lazy" class="product-image" alt="Коробка на 16 конфет с мишкой Новый год" />
@@ -797,18 +1267,29 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="1590">1590&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка на 16 конфет с мишкой Новый год">Коробка на 16 конфет с мишкой Новый год</h2>    
+    <div class="product-card-price" data-price="1590">
+      1590&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка на 16 конфет с мишкой Новый год">Коробка на 16 конфет с мишкой Новый год</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 
-<div class="product-card" id="product-32" data-categories="Коробки,Новый год">
+<div
+  class="product-card"
+  id="product-32"
+  data-categories="Коробки"
+  data-tags="new-year"
+>
   <div class="slider">
     <div class="slides"><div class="slide">
   <img src="../assets/images/cards/32/1.jpg" loading="lazy" class="product-image" alt="Коробка на 16 конфет с мишкой Новый год" />
@@ -819,22 +1300,1228 @@
   </div>
   <div class="dots-container"></div>
   <div class="product-card-info">
-    <div class="product-card-price" data-price="1590">1590&nbsp;₽</div>
-    <h2 class="product-card-title" data-name="Коробка на 16 конфет с мишкой Новый год">Коробка на 16 конфет с мишкой Новый год</h2>    
+    <div class="product-card-price" data-price="1590">
+      1590&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Коробка на 16 конфет с мишкой Новый год">Коробка на 16 конфет с мишкой Новый год</h2>
     <div class="product-card-cart-controls">
       <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">-</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
       <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">+</button>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-38"
+  data-categories="Коробки"
+  data-tags="hat-boxes"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/38/1.jpg" loading="lazy" class="product-image" alt="Композиция в шляпкной коробке с зайцем" />
+</div>
+<div class="slide">
+  <img src="../assets/images/cards/38/2.jpg" loading="lazy" class="product-image" alt="Композиция в шляпкной коробке с зайцем" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2290">
+      2290&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Композиция в шляпкной коробке с зайцем">Композиция в шляпкной коробке с зайцем</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-39"
+  data-categories="Коробки"
+  data-tags="hat-boxes"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/39/1.jpg" loading="lazy" class="product-image" alt="Композиция в шляпкной коробке с зайцем" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2490">
+      2490&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Композиция в шляпкной коробке с зайцем">Композиция в шляпкной коробке с зайцем</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-40"
+  data-categories="Коробки"
+  data-tags="hat-boxes"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/40/1.jpg" loading="lazy" class="product-image" alt="Композиция в шляпкной коробке" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="3990">
+      3990&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Композиция в шляпкной коробке">Композиция в шляпкной коробке</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-41"
+  data-categories="Коробки"
+  data-tags="hat-boxes"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/41/1.jpg" loading="lazy" class="product-image" alt="Композиция в шляпной коробке с мишкой" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2190">
+      2190&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Композиция в шляпной коробке с мишкой">Композиция в шляпной коробке с мишкой</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-42"
+  data-categories="Коробки"
+  data-tags="hat-boxes"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/42/1.jpg" loading="lazy" class="product-image" alt="Композиция в шляпной коробке с мишкой мини" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="1490">
+      1490&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Композиция в шляпной коробке с мишкой мини">Композиция в шляпной коробке с мишкой мини</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-43"
+  data-categories="Коробки"
+  data-tags="hat-boxes"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/43/1.jpg" loading="lazy" class="product-image" alt="Композиция в шляпной коробке" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="1990">
+      1990&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Композиция в шляпной коробке">Композиция в шляпной коробке</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-44"
+  data-categories="Коробки"
+  data-tags="hat-boxes,tulips"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/44/1.jpg" loading="lazy" class="product-image" alt="Тюльпаны с мишкой в шляпной коробке" />
+</div>
+<div class="slide">
+  <img src="../assets/images/cards/44/2.jpg" loading="lazy" class="product-image" alt="Тюльпаны с мишкой в шляпной коробке" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="1990">
+      1990&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Тюльпаны с мишкой в шляпной коробке">Тюльпаны с мишкой в шляпной коробке</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-45"
+  data-categories="Коробки"
+  data-tags="hat-boxes"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/45/1.jpg" loading="lazy" class="product-image" alt="Композиция в шляпкной коробке с розами" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="3290">
+      3290&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Композиция в шляпкной коробке с розами">Композиция в шляпкной коробке с розами</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-46"
+  data-categories="Коробки"
+  data-tags="hat-boxes"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/46/1.jpg" loading="lazy" class="product-image" alt="Композиция в шляпкной коробке" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2490">
+      2490&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Композиция в шляпкной коробке">Композиция в шляпкной коробке</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-47"
+  data-categories="Коробки"
+  data-tags="hat-boxes"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/47/1.jpg" loading="lazy" class="product-image" alt="Композиция в шляпкной коробке" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="1990">
+      1990&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Композиция в шляпкной коробке">Композиция в шляпкной коробке</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-48"
+  data-categories="Коробки"
+  data-tags="hat-boxes"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/48/1.jpg" loading="lazy" class="product-image" alt="Композиция в шляпкной коробке" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="4990">
+      4990&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Композиция в шляпкной коробке">Композиция в шляпкной коробке</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-49"
+  data-categories="Коробки"
+  data-tags="hat-boxes"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/49/1.jpg" loading="lazy" class="product-image" alt="Композиция в шляпкной коробке с мишкой" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2490">
+      2490&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Композиция в шляпкной коробке с мишкой">Композиция в шляпкной коробке с мишкой</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-50"
+  data-categories="Коробки"
+  data-tags="hat-boxes"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/50/1.jpg" loading="lazy" class="product-image" alt="Композиция в шляпкной коробке" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="1990">
+      1990&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Композиция в шляпкной коробке">Композиция в шляпкной коробке</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-51"
+  data-categories="Коробки"
+  data-tags="hat-boxes,tulips"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/51/1.jpg" loading="lazy" class="product-image" alt="Тюльпаны с мишкой в шляпной коробке" />
+</div>
+<div class="slide">
+  <img src="../assets/images/cards/51/2.jpg" loading="lazy" class="product-image" alt="Тюльпаны с мишкой в шляпной коробке" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2190">
+      2190&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Тюльпаны с мишкой в шляпной коробке">Тюльпаны с мишкой в шляпной коробке</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-52"
+  data-categories="Коробки"
+  data-tags="hat-boxes,tulips"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/52/1.jpg" loading="lazy" class="product-image" alt="Тюльпаны в шляпной коробке с архидеей" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2490">
+      2490&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Тюльпаны в шляпной коробке с архидеей">Тюльпаны в шляпной коробке с архидеей</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-53"
+  data-categories="Коробки"
+  data-tags="hat-boxes,tulips"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/53/1.jpg" loading="lazy" class="product-image" alt="Тюльпаны в шляпной коробке с архидеей" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2490">
+      2490&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Тюльпаны в шляпной коробке с архидеей">Тюльпаны в шляпной коробке с архидеей</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-54"
+  data-categories="Коробки"
+  data-tags="hat-boxes,1-september,teachers-day"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/54/1.jpg" loading="lazy" class="product-image" alt="Букет осенний с совенком" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2490">
+      2490&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Букет осенний с совенком">Букет осенний с совенком</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-55"
+  data-categories="Коробки"
+  data-tags="hat-boxes,peonies"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/55/1.jpg" loading="lazy" class="product-image" alt="Пионы в шляпной коробке" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2490">
+      2490&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Пионы в шляпной коробке">Пионы в шляпной коробке</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-56"
+  data-categories="Коробки"
+  data-tags="hat-boxes,peonies"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/56/1.jpg" loading="lazy" class="product-image" alt="Пионы в шляпной коробке с мишкой" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2490">
+      2490&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Пионы в шляпной коробке с мишкой">Пионы в шляпной коробке с мишкой</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-57"
+  data-categories="Коробки"
+  data-tags="hat-boxes,1-september,teachers-day,mothers-day"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/57/1.jpg" loading="lazy" class="product-image" alt="Осенний букет в шляпной коробке (в сумке)" />
+</div>
+<div class="slide">
+  <img src="../assets/images/cards/57/2.jpg" loading="lazy" class="product-image" alt="Осенний букет в шляпной коробке (в сумке)" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2490">
+      2490&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Осенний букет в шляпной коробке (в сумке)">Осенний букет в шляпной коробке (в сумке)</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-58"
+  data-categories="Коробки"
+  data-tags="hat-boxes,1-september,teachers-day,mothers-day"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/58/1.jpg" loading="lazy" class="product-image" alt="Осенний букет в шляпной коробке" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2490">
+      2490&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Осенний букет в шляпной коробке">Осенний букет в шляпной коробке</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-59"
+  data-categories="Коробки"
+  data-tags="hat-boxes,1-september,teachers-day,mothers-day"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/59/1.jpg" loading="lazy" class="product-image" alt="Осенний букет в шляпной коробке" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2490">
+      2490&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Осенний букет в шляпной коробке">Осенний букет в шляпной коробке</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-60"
+  data-categories="Коробки"
+  data-tags="hat-boxes,mothers-day"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/60/1.jpg" loading="lazy" class="product-image" alt="Букет в шляпной коробке с мишкой" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2190">
+      2190&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Букет в шляпной коробке с мишкой">Букет в шляпной коробке с мишкой</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-61"
+  data-categories="Коробки"
+  data-tags="hat-boxes,peonies"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/61/1.jpg" loading="lazy" class="product-image" alt="Пионы в шляпной коробке" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2490">
+      2490&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Пионы в шляпной коробке">Пионы в шляпной коробке</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-62"
+  data-categories="Коробки"
+  data-tags="hat-boxes"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/62/1.jpg" loading="lazy" class="product-image" alt="Букет из разных цветов в шляпной коробке" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="3490">
+      3490&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Букет из разных цветов в шляпной коробке">Букет из разных цветов в шляпной коробке</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-63"
+  data-categories="Коробки"
+  data-tags="hat-boxes"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/63/1.jpg" loading="lazy" class="product-image" alt="Смешанный букет в шляпной коробке" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2990">
+      2990&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Смешанный букет в шляпной коробке">Смешанный букет в шляпной коробке</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-64"
+  data-categories="Коробки"
+  data-tags="hat-boxes"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/64/1.jpg" loading="lazy" class="product-image" alt="Смешанный букет в шляпной коробке" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="3990">
+      3990&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Смешанный букет в шляпной коробке">Смешанный букет в шляпной коробке</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-65"
+  data-categories="Коробки"
+  data-tags="hat-boxes"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/65/1.jpg" loading="lazy" class="product-image" alt="Смешанный букет в шляпной коробке с мишкой" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2490">
+      2490&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Смешанный букет в шляпной коробке с мишкой">Смешанный букет в шляпной коробке с мишкой</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-70"
+  data-categories="Коробки"
+  data-tags="hat-boxes,peonies"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/70/1.jpg" loading="lazy" class="product-image" alt="Шоколадные пионы в шляпной коробке" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2390">
+      2390&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Шоколадные пионы в шляпной коробке">Шоколадные пионы в шляпной коробке</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-71"
+  data-categories="Коробки"
+  data-tags="hat-boxes,peonies"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/71/1.jpg" loading="lazy" class="product-image" alt="Шоколадные пионы в шляпной коробке 35 шт. с мишкой" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="3290">
+      3290&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Шоколадные пионы в шляпной коробке 35 шт. с мишкой">Шоколадные пионы в шляпной коробке 35 шт. с мишкой</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-72"
+  data-categories="Коробки"
+  data-tags="hat-boxes,peonies"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/72/1.jpg" loading="lazy" class="product-image" alt="Шоколадные пионы в шляпной коробке 41 шт. с мишкой" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="3690">
+      3690&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Шоколадные пионы в шляпной коробке 41 шт. с мишкой">Шоколадные пионы в шляпной коробке 41 шт. с мишкой</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-76"
+  data-categories="Коробки"
+  data-tags="roses,thematic"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/76/1.jpg" loading="lazy" class="product-image" alt="Шоколадные розы в шляпной коробке сердце 67 шт." />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="3990">
+      3990&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Шоколадные розы в шляпной коробке сердце 67 шт.">Шоколадные розы в шляпной коробке сердце 67 шт.</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-80"
+  data-categories="Коробки"
+  data-tags="hat-boxes,roses"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/80/1.jpg" loading="lazy" class="product-image" alt="Шоколадные розы в шляпной коробке 35 шт." />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2190">
+      2190&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Шоколадные розы в шляпной коробке 35 шт.">Шоколадные розы в шляпной коробке 35 шт.</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-81"
+  data-categories="Коробки"
+  data-tags="hat-boxes,roses"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/81/1.jpg" loading="lazy" class="product-image" alt="Шоколадные розы в шляпной коробке 45 шт. с мишкой" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2290">
+      2290&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Шоколадные розы в шляпной коробке 45 шт. с мишкой">Шоколадные розы в шляпной коробке 45 шт. с мишкой</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-82"
+  data-categories="Коробки"
+  data-tags="hat-boxes,roses"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/82/1.jpg" loading="lazy" class="product-image" alt="Шоколадные розы в шляпной коробке 55 шт." />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="2490">
+      2490&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Шоколадные розы в шляпной коробке 55 шт.">Шоколадные розы в шляпной коробке 55 шт.</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="product-card"
+  id="product-84"
+  data-categories="Коробки"
+  data-tags="hat-boxes,roses"
+>
+  <div class="slider">
+    <div class="slides"><div class="slide">
+  <img src="../assets/images/cards/84/1.jpg" loading="lazy" class="product-image" alt="Шоколадные розы в шляпной коробке 75 шт. с мишкой" />
+</div>
+</div>
+    <button class="prev-btn">‹</button>
+    <button class="next-btn">›</button>
+  </div>
+  <div class="dots-container"></div>
+  <div class="product-card-info">
+    <div class="product-card-price" data-price="3390">
+      3390&nbsp;₽
+    </div>
+    <h2 class="product-card-title" data-name="Шоколадные розы в шляпной коробке 75 шт. с мишкой">Шоколадные розы в шляпной коробке 75 шт. с мишкой</h2>
+    <div class="product-card-cart-controls">
+      <button class="product-card-add-to-cart-button">В корзину</button>
+      <button class="product-card-cart-count-button hide" data-action="-">
+        -
+      </button>
+      <div class="product-card-cart-count hide"></div>
+      <button class="product-card-cart-count-button hide" data-action="+">
+        +
+      </button>
     </div>
   </div>
 </div>
 </div>
       </main>
-      
     </div>
 
     <!-- Подключение JS -->
     <script src="../js/productPage.js" type="module" defer></script>
+    <script src="../js/productFilter.js" type="module" defer></script>
   </body>
 </html>

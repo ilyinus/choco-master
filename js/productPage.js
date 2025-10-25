@@ -37,8 +37,12 @@ class ProductCard {
     this.prevBtn = this.requireElement('.prev-btn')
     this.nextBtn = this.requireElement('.next-btn')
     this.dotsContainer = this.requireElement('.dots-container')
-    this.addToCartButton = this.requireElement('.product-card-add-to-cart-button')
-    this.cartControls = this.card.querySelectorAll('.product-card-cart-count-button')
+    this.addToCartButton = this.requireElement(
+      '.product-card-add-to-cart-button'
+    )
+    this.cartControls = this.card.querySelectorAll(
+      '.product-card-cart-count-button'
+    )
     this.cartCount = this.requireElement('.product-card-cart-count')
   }
 
@@ -95,7 +99,9 @@ class ProductCard {
   }
 
   prevImage() {
-    this.slideToImage((this.slidesCount + this.activeSlideIndex - 1) % this.slidesCount)
+    this.slideToImage(
+      (this.slidesCount + this.activeSlideIndex - 1) % this.slidesCount
+    )
   }
 
   slideToImage(index) {
@@ -129,7 +135,11 @@ class ProductCard {
         name: this.name,
         price: this.price,
         img: this.images[0].getAttribute('src'),
-        url: window.location.href
+        url:
+          window.location.protocol +
+          '//' +
+          window.location.host +
+          window.location.pathname
       })
     } else if (action === '-') {
       eventBus.dispatch('cart:removeItem', {id: this.id})
@@ -143,6 +153,10 @@ eventBus.subscribe('cart:update', (e) => {
   if (card) {
     card?.instance.updateCartUI()
   }
+})
+
+eventBus.subscribe('filters:update', (e) => {
+  setFilters(e.detail.tags)
 })
 
 document
@@ -182,24 +196,19 @@ document.addEventListener('touchend', (e) => {
 function processParams() {
   const productId = params.get('id')
   if (productId) {
-    document.querySelectorAll('.card').forEach((card) => {
+    document.querySelectorAll('.product-card').forEach((card) => {
       if (card.id !== productId) {
         card.style.display = 'none'
       }
     })
-    addShowAllButton()
   }
 }
 
-function addShowAllButton() {
-  const btn = document.createElement('button')
-  btn.innerText = 'Показать все товары категории'
-  btn.className = 'show-all-button'
-  btn.addEventListener('click', () => {
-    const cards = document.querySelectorAll('.card')
-    cards.forEach((card) => (card.style.display = ''))
-    btn.remove()
-    history.replaceState(null, '', location.pathname)
+function setFilters(tags) {
+  document.querySelectorAll('.product-card').forEach((card) => {
+    const productTags = card.dataset.tags.split(',')
+    const hasTag =
+      tags.length === 0 || tags.some((tag) => productTags.includes(tag))
+    card.classList.toggle('hidden', !hasTag)
   })
-  document.querySelector('.show-all-button-wrapper').appendChild(btn)
 }

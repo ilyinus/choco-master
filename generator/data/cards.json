@@ -2,7 +2,8 @@
   {
     "id": 1,
     "name": "Пельмени в коробке 9шт.",
-    "categories": ["Коробки", "Пельмени"],
+    "categories": ["Коробки"],
+    "tags": ["dumplings"],
     "price": 690,
     "images": 1
   },
@@ -10,6 +11,7 @@
     "id": 2,
     "name": "Коробка конфет на 16 ячеек. с мишкой",
     "categories": ["Коробки"],
+    "tags": [],
     "price": 1590,
     "images": 2
   },
@@ -17,48 +19,55 @@
     "id": 3,
     "name": "Пенал на 5 конфет",
     "categories": ["Коробки"],
+    "tags": [],
     "price": 790,
     "images": 1
   },
   {
     "id": 4,
     "name": "Коробка конфет 8 марта с плиткой",
-    "categories": ["Коробки", "8 марта"],
+    "categories": ["Коробки"],
+    "tags": ["8-march"],
     "price": 1690,
     "images": 1
   },
   {
     "id": 5,
     "name": "Коробка конфет Новый год",
-    "categories": ["Коробки", "Новый год"],
+    "categories": ["Коробки"],
+    "tags": ["new-year"],
     "price": 1690,
     "images": 1
   },
   {
     "id": 6,
     "name": "Коробка конфет Новый год",
-    "categories": ["Коробки", "Новый год"],
+    "categories": ["Коробки"],
+    "tags": ["new-year"],
     "price": 990,
     "images": 1
   },
   {
     "id": 7,
     "name": "Пенал Новый год",
-    "categories": ["Коробки", "Новый год"],
+    "categories": ["Коробки"],
+    "tags": ["new-year"],
     "price": 790,
     "images": 1
   },
   {
     "id": 8,
     "name": "Новогодняя коробка на 12 ячеек",
-    "categories": ["Коробки", "Новый год"],
+    "categories": ["Коробки"],
+    "tags": ["new-year"],
     "price": 1390,
     "images": 1
   },
   {
     "id": 9,
     "name": "Коробка тематическая 16 ячеек",
-    "categories": ["Коробки", "Тематические"],
+    "categories": ["Коробки"],
+    "tags": ["thematic"],
     "price": 1890,
     "images": 1
   },
@@ -66,27 +75,31 @@
     "id": 10,
     "name": "Коробка конфет на 9 ячеек",
     "categories": ["Коробки"],
+    "tags": [],
     "price": 990,
     "images": 1
   },
   {
     "id": 11,
     "name": "Коробка тематическая 16 ячеек",
-    "categories": ["Коробки", "Тематические"],
+    "categories": ["Коробки"],
+    "tags": ["thematic"],
     "price": 1690,
     "images": 1
   },
   {
     "id": 12,
     "name": "Коробка конфет 23 февраля",
-    "categories": ["Коробки", "23 февраля"],
+    "categories": ["Коробки"],
+    "tags": ["23-febraury"],
     "price": 990,
     "images": 1
   },
   {
     "id": 13,
     "name": "Коробка конфет 8 марта",
-    "categories": ["Коробки", "8 марта"],
+    "categories": ["Коробки"],
+    "tags": ["8-march"],
     "price": 1390,
     "images": 1
   },
@@ -94,97 +107,111 @@
     "id": 14,
     "name": "Коробка конфет на 5 ячеек",
     "categories": ["Коробки"],
+    "tags": [],
     "price": 790,
     "images": 1
   },
   {
     "id": 15,
     "name": "Пасхальная композиции с зайчиком",
-    "categories": ["Коробки", "Пасха"],
+    "categories": ["Коробки"],
+    "tags": ["easter"],
     "price": 990,
     "images": 2
   },
   {
     "id": 16,
     "name": "Коробка на 12 ячеек с зайчиком",
-    "categories": ["Коробки", "День учителя", "День воспитателя", "1 сентября", "Выпускной"],
+    "categories": ["Коробки"],
+    "tags": ["teachers-day", "educator-day", "1-september", "graduation"],
     "price": 1390,
     "images": 1
   },
   {
     "id": 17,
     "name": "Коробка конфет на день учителя",
-    "categories": ["Коробки", "День учителя", "1 сентября"],
+    "categories": ["Коробки"],
+    "tags": ["teachers-day", "1-september"],
     "price": 1590,
     "images": 1
   },
   {
     "id": 18,
     "name": "Коробка конфет 1 сентярбря",
-    "categories": ["Коробки", "1 сентября"],
+    "categories": ["Коробки"],
+    "tags": ["1-september"],
     "price": 1590,
     "images": 1
   },
   {
     "id": 19,
     "name": "Пенал день учителя, 1 сентября",
-    "categories": ["Коробки", "1 сентября", "День учителя"],
+    "categories": ["Коробки"],
+    "tags": ["teachers-day", "1-september"],
     "price": 790,
     "images": 1
   },
   {
     "id": 20,
     "name": "Коробка на 9 ячеек",
-    "categories": ["Коробки", "1 сентября", "День учителя"],
+    "categories": ["Коробки"],
+    "tags": ["teachers-day", "1-september"],
     "price": 990,
     "images": 1
   },
   {
     "id": 21,
     "name": "Коробка на 9 ячеек с мишкой и совенком",
-    "categories": ["Коробки", "1 сентября", "День учителя"],
+    "categories": ["Коробки"],
+    "tags": ["teachers-day", "1-september"],
     "price": 990,
     "images": 1
   },
   {
     "id": 22,
     "name": "Коробка на 9 ячеек с совенком",
-    "categories": ["Коробки", "1 сентября", "День учителя"],
+    "categories": ["Коробки"],
+    "tags": ["teachers-day", "1-september"],
     "price": 990,
     "images": 1
   },
   {
     "id": 23,
     "name": "Коробка на 25 конфет",
-    "categories": ["Коробки", "Тематические"],
+    "categories": ["Коробки"],
+    "tags": ["thematic"],
     "price": 1990,
     "images": 1
   },
   {
     "id": 24,
     "name": "Коробка на 9 конфет, Маме",
-    "categories": ["Коробки", "День матери"],
+    "categories": ["Коробки"],
+    "tags": ["mothers-day"],
     "price": 990,
     "images": 1
   },
   {
     "id": 25,
     "name": "Коробка на 16 конфет, Маме",
-    "categories": ["Коробки", "День матери"],
+    "categories": ["Коробки"],
+    "tags": ["mothers-day"],
     "price": 1590,
     "images": 1
   },
   {
     "id": 26,
     "name": "Коробка на 9 конфет, Маме",
-    "categories": ["Коробки", "День матери"],
+    "categories": ["Коробки"],
+    "tags": ["mothers-day"],
     "price": 990,
     "images": 1
   },
   {
     "id": 27,
     "name": "Коробка на 16 конфет, Маме",
-    "categories": ["Коробки", "День матери"],
+    "categories": ["Коробки"],
+    "tags": ["mothers-day"],
     "price": 1590,
     "images": 1
   },
@@ -192,6 +219,7 @@
     "id": 28,
     "name": "Композиция в коробке",
     "categories": ["Коробки"],
+    "tags": [],
     "price": 1590,
     "images": 4
   },
@@ -199,6 +227,7 @@
     "id": 29,
     "name": "Коробка на 9 ячеек с мишкой",
     "categories": ["Коробки"],
+    "tags": [],
     "price": 990,
     "images": 1
   },
@@ -206,147 +235,464 @@
     "id": 30,
     "name": "Коробка на 16 конфет с мишкой",
     "categories": ["Коробки"],
+    "tags": [],
     "price": 1590,
     "images": 1
   },
   {
     "id": 31,
     "name": "Коробка на 16 конфет с мишкой Новый год",
-    "categories": ["Коробки", "Новый год"],
+    "categories": ["Коробки"],
+    "tags": ["new-year"],
     "price": 1590,
     "images": 1
   },
   {
     "id": 32,
     "name": "Коробка на 16 конфет с мишкой Новый год",
-    "categories": ["Коробки", "Новый год"],
+    "categories": ["Коробки"],
+    "tags": ["new-year"],
     "price": 1590,
     "images": 1
   },
   {
     "id": 33,
     "name": "Пельмени в букете 27 шт.",
-    "categories": ["Пельмени"],
+    "categories": ["Букеты"],
+    "tags": ["dumplings"],
     "price": 1590,
     "images": 2
   },
   {
     "id": 34,
     "name": "Пельмени в букете 37 шт.",
-    "categories": ["Пельмени"],
+    "categories": ["Букеты"],
+    "tags": ["dumplings"],
     "price": 1990,
     "images": 2
   },
   {
     "id": 35,
     "name": "Пельмени в букете 15 шт.",
-    "categories": ["Пельмени"],
+    "categories": ["Букеты"],
+    "tags": ["dumplings"],
     "price": 990,
     "images": 1
   },
   {
     "id": 36,
     "name": "Пельмени в букете 45 шт.",
-    "categories": ["Пельмени"],
+    "categories": ["Букеты"],
+    "tags": ["dumplings"],
     "price": 2190,
     "images": 2
   },
   {
     "id": 37,
     "name": "Пельмени в букете 19 шт.",
-    "categories": ["Пельмени"],
+    "categories": ["Букеты"],
+    "tags": ["dumplings"],
     "price": 1290,
     "images": 1
   },
   {
     "id": 38,
     "name": "Композиция в шляпкной коробке с зайцем",
-    "categories": ["Шляпные коробки"],
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes"],
     "price": 2290,
     "images": 2
   },
   {
     "id": 39,
     "name": "Композиция в шляпкной коробке с зайцем",
-    "categories": ["Шляпные коробки"],
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes"],
     "price": 2490,
     "images": 1
   },
   {
     "id": 40,
     "name": "Композиция в шляпкной коробке",
-    "categories": ["Шляпные коробки"],
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes"],
     "price": 3990,
     "images": 1
   },
   {
     "id": 41,
     "name": "Композиция в шляпной коробке с мишкой",
-    "categories": ["Шляпные коробки"],
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes"],
     "price": 2190,
     "images": 1
   },
   {
     "id": 42,
     "name": "Композиция в шляпной коробке с мишкой мини",
-    "categories": ["Шляпные коробки"],
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes"],
     "price": 1490,
     "images": 1
   },
   {
     "id": 43,
     "name": "Композиция в шляпной коробке",
-    "categories": ["Шляпные коробки"],
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes"],
     "price": 1990,
     "images": 1
   },
   {
     "id": 44,
     "name": "Тюльпаны с мишкой в шляпной коробке",
-    "categories": ["Шляпные коробки", "Тюльпаны"],
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes", "tulips"],
     "price": 1990,
     "images": 2
   },
   {
     "id": 45,
     "name": "Композиция в шляпкной коробке с розами",
-    "categories": ["Шляпные коробки"],
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes"],
     "price": 3290,
     "images": 1
   },
   {
     "id": 46,
     "name": "Композиция в шляпкной коробке",
-    "categories": ["Шляпные коробки"],
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes"],
     "price": 2490,
     "images": 1
   },
   {
     "id": 47,
     "name": "Композиция в шляпкной коробке",
-    "categories": ["Шляпные коробки"],
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes"],
     "price": 1990,
     "images": 1
   },
   {
     "id": 48,
     "name": "Композиция в шляпкной коробке",
-    "categories": ["Шляпные коробки"],
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes"],
     "price": 4990,
     "images": 1
   },
   {
     "id": 49,
     "name": "Композиция в шляпкной коробке с мишкой",
-    "categories": ["Шляпные коробки"],
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes"],
     "price": 2490,
     "images": 1
   },
   {
     "id": 50,
     "name": "Композиция в шляпкной коробке",
-    "categories": ["Шляпные коробки"],
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes"],
     "price": 1990,
+    "images": 1
+  },
+  {
+    "id": 51,
+    "name": "Тюльпаны с мишкой в шляпной коробке",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes", "tulips"],
+    "price": 2190,
+    "images": 2
+  },
+  {
+    "id": 52,
+    "name": "Тюльпаны в шляпной коробке с архидеей",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes", "tulips"],
+    "price": 2490,
+    "images": 1
+  },
+  {
+    "id": 53,
+    "name": "Тюльпаны в шляпной коробке с архидеей",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes", "tulips"],
+    "price": 2490,
+    "images": 1
+  },
+  {
+    "id": 54,
+    "name": "Букет осенний с совенком",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes", "1-september", "teachers-day"],
+    "price": 2490,
+    "images": 1
+  },
+  {
+    "id": 55,
+    "name": "Пионы в шляпной коробке",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes", "peonies"],
+    "price": 2490,
+    "images": 1
+  },
+  {
+    "id": 56,
+    "name": "Пионы в шляпной коробке с мишкой",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes", "peonies"],
+    "price": 2490,
+    "images": 1
+  },
+  {
+    "id": 57,
+    "name": "Осенний букет в шляпной коробке (в сумке)",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes", "1-september", "teachers-day", "mothers-day"],
+    "price": 2490,
+    "images": 2
+  },
+  {
+    "id": 58,
+    "name": "Осенний букет в шляпной коробке",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes", "1-september", "teachers-day", "mothers-day"],
+    "price": 2490,
+    "images": 1
+  },
+  {
+    "id": 59,
+    "name": "Осенний букет в шляпной коробке",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes", "1-september", "teachers-day", "mothers-day"],
+    "price": 2490,
+    "images": 1
+  },
+  {
+    "id": 60,
+    "name": "Букет в шляпной коробке с мишкой",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes", "mothers-day"],
+    "price": 2190,
+    "images": 1
+  },
+  {
+    "id": 61,
+    "name": "Пионы в шляпной коробке",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes", "peonies"],
+    "price": 2490,
+    "images": 1
+  },
+  {
+    "id": 62,
+    "name": "Букет из разных цветов в шляпной коробке",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes"],
+    "price": 3490,
+    "images": 1
+  },
+  {
+    "id": 63,
+    "name": "Смешанный букет в шляпной коробке",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes"],
+    "price": 2990,
+    "images": 1
+  },
+  {
+    "id": 64,
+    "name": "Смешанный букет в шляпной коробке",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes"],
+    "price": 3990,
+    "images": 1
+  },
+  {
+    "id": 65,
+    "name": "Смешанный букет в шляпной коробке с мишкой",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes"],
+    "price": 2490,
+    "images": 1
+  },
+  {
+    "id": 66,
+    "name": "Шоколадные пионы в букете 13 шт.",
+    "categories": ["Букеты"],
+    "tags": ["peonies"],
+    "price": 1590,
+    "images": 2
+  },
+  {
+    "id": 67,
+    "name": "Шоколадные пионы в букете 19 шт.",
+    "categories": ["Букеты"],
+    "tags": ["peonies"],
+    "price": 1990,
+    "images": 2
+  },
+  {
+    "id": 68,
+    "name": "Шоколадные пионы в букете 25 шт.",
+    "categories": ["Букеты"],
+    "tags": ["peonies"],
+    "price": 2390,
+    "images": 2
+  },
+  {
+    "id": 69,
+    "name": "Шоколадные пионы в букете 7 шт.",
+    "categories": ["Букеты"],
+    "tags": ["peonies"],
+    "price": 1190,
+    "images": 1
+  },
+  {
+    "id": 70,
+    "name": "Шоколадные пионы в шляпной коробке",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes", "peonies"],
+    "price": 2390,
+    "images": 1
+  },
+  {
+    "id": 71,
+    "name": "Шоколадные пионы в шляпной коробке 35 шт. с мишкой",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes", "peonies"],
+    "price": 3290,
+    "images": 1
+  },
+  {
+    "id": 72,
+    "name": "Шоколадные пионы в шляпной коробке 41 шт. с мишкой",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes", "peonies"],
+    "price": 3690,
+    "images": 1
+  },
+  {
+    "id": 73,
+    "name": "Шоколадные пионы в букете 11 шт.",
+    "categories": ["Букеты"],
+    "tags": ["peonies"],
+    "price": 1390,
+    "images": 2
+  },
+  {
+    "id": 74,
+    "name": "Шоколадные розы в букете 19 шт.",
+    "categories": ["Букеты"],
+    "tags": ["roses"],
+    "price": 1390,
+    "images": 4
+  },
+  {
+    "id": 75,
+    "name": "Шоколадные розы в букете 25 шт.",
+    "categories": ["Букеты"],
+    "tags": ["roses"],
+    "price": 1690,
+    "images": 1
+  },
+  {
+    "id": 76,
+    "name": "Шоколадные розы в шляпной коробке сердце 67 шт.",
+    "categories": ["Коробки"],
+    "tags": ["roses", "thematic"],
+    "price": 3990,
+    "images": 1
+  },
+  {
+    "id": 77,
+    "name": "Шоколадные розы в букете 45 шт.",
+    "categories": ["Букеты"],
+    "tags": ["roses"],
+    "price": 2190,
+    "images": 1
+  },
+  {
+    "id": 78,
+    "name": "Шоколадные пионы в букете 7 шт.",
+    "categories": ["Букеты"],
+    "tags": ["roses"],
+    "price": 790,
+    "images": 1
+  },
+  {
+    "id": 79,
+    "name": "Шоколадные розы в букете 35 шт.",
+    "categories": ["Букеты"],
+    "tags": ["roses"],
+    "price": 1990,
+    "images": 1
+  },
+  {
+    "id": 80,
+    "name": "Шоколадные розы в шляпной коробке 35 шт.",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes", "roses"],
+    "price": 2190,
+    "images": 1
+  },
+  {
+    "id": 81,
+    "name": "Шоколадные розы в шляпной коробке 45 шт. с мишкой",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes", "roses"],
+    "price": 2290,
+    "images": 1
+  },
+  {
+    "id": 82,
+    "name": "Шоколадные розы в шляпной коробке 55 шт.",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes", "roses"],
+    "price": 2490,
+    "images": 1
+  },
+  {
+    "id": 83,
+    "name": "Шоколадные розы в букете 37 шт.",
+    "categories": ["Букеты"],
+    "tags": ["roses"],
+    "price": 1890,
+    "images": 1
+  },
+  {
+    "id": 84,
+    "name": "Шоколадные розы в шляпной коробке 75 шт. с мишкой",
+    "categories": ["Коробки"],
+    "tags": ["hat-boxes", "roses"],
+    "price": 3390,
+    "images": 1
+  },
+  {
+    "id": 85,
+    "name": "Шоколадные тюльпаны в букете 13 шт.",
+    "categories": ["Букеты"],
+    "tags": ["tulips"],
+    "price": 1390,
+    "images": 1
+  },
+  {
+    "id": 86,
+    "name": "Шоколадные тюльпаны в букете 15 шт. с мишкой",
+    "categories": ["Букеты"],
+    "tags": ["tulips"],
+    "price": 1590,
+    "images": 1
+  },
+  {
+    "id": 87,
+    "name": "Шоколадные тюльпаны в букете 17 шт. с мишкой",
+    "categories": ["Букеты"],
+    "tags": ["tulips"],
+    "price": 1690,
     "images": 1
   }
 ]
