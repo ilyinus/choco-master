@@ -7,8 +7,10 @@ body {
   background-color: var(--primary-color);
 }
 
+html.lock-scroll,
 body.lock-scroll {
-  overflow-y: hidden;
+  overflow: hidden;
+  height: 100%;
 }
 
 a {
