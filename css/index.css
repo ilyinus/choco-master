@@ -8,8 +8,7 @@ body {
 }
 
 body.lock-scroll {
-  overflow-y: hidden;
-  position: fixed;
+  overflow-y: hidden;  
 }
 
 a {
