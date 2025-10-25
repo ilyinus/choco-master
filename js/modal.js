@@ -69,9 +69,6 @@ export default class Modal {
     this.activeSlideIndex = card.activeSlideIndex
     this.init()
     this.modal.classList.add('open')
-    // document.documentElement.classList.toggle('lock-scroll')
-    // document.body.classList.toggle('lock-scroll')
-    this.lockScroll()
     setTimeout(() => this.modalSlides.classList.add('transition'), 0)
   }
 
@@ -80,9 +77,6 @@ export default class Modal {
     this.modalSlides.innerHTML = ''
     this.thumbnailsContainer.innerHTML = ''
     this.modal.classList.remove('open')
-    // document.documentElement.classList.toggle('lock-scroll')
-    // document.body.classList.toggle('lock-scroll')
-    this.unlockScroll()
     this.modalSlides.classList.remove('transition')
   }
 
@@ -121,22 +115,6 @@ export default class Modal {
     } else if (diff > 0 && this.activeSlideIndex > 0) {
       this.prevSlideImage()
     }
-  }
-
-  lockScroll() {
-    // scrollY = window.scrollY
-    // document.documentElement.classList.add('lock-scroll')
-    // document.body.classList.add('lock-scroll')
-    // document.body.style.top = `-${scrollY}px`
-    // document.querySelector('.container').classList.add('scroll-lock')
-  }
-
-  unlockScroll() {
-    // document.documentElement.classList.remove('lock-scroll')
-    // document.body.classList.remove('lock-scroll')
-    // document.body.style.top = ''
-    // window.scrollTo(0, scrollY)
-    // document.querySelector('.container').classList.remove('scroll-lock')
   }
 
   addListeners() {

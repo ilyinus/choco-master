@@ -13,25 +13,6 @@ body {
   overflow-x: hidden;
 }
 
-/* .container {
-  position: relative;
-}
-
-.container.lock-scroll {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-} */
-
-/* html.lock-scroll,
-body.lock-scroll {
-  overflow-y: hidden;
-  height: 100%;
-  position: relative;
-} */
-
 a {
   text-decoration: none;
   color: var(--white-color);

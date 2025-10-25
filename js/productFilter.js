@@ -124,7 +124,6 @@ function applyFilters() {
 function openPanel() {
   el.overlay.classList.remove('hidden')
   if (hasActiveFilters()) toggle(el.clearButton, true)
-  lockScroll()
 }
 
 function closePanel() {
@@ -134,8 +133,6 @@ function closePanel() {
   el.tags.forEach((input) => {
     input.checked = !!state.tags[input.dataset.filterTag]
   })
-
-  unlockScroll()
 }
 
 function clearAllFilters() {
@@ -158,17 +155,6 @@ function clearAllFilters() {
 }
 
 /* ---------- Helpers ---------- */
-
-function lockScroll() {
-  // document.documentElement.classList.toggle('lock-scroll')
-  // document.body.classList.add('lock-scroll')
-}
-
-function unlockScroll() {
-  // document.documentElement.classList.toggle('lock-scroll')
-  // document.body.classList.remove('lock-scroll')
-}
-
 function toggle(element, visible) {
   if (!element) return
   element.classList.toggle('hidden', !visible)
