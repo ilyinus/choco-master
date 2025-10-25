@@ -4,7 +4,7 @@ import notificationController from './notificationController.js'
 
 class OrderController {
   botToken = '8400834109:AAF5qcrQtZW4iSHKe0lDybjz88LsnMAE3oA'
-  chatId = '346503356'
+  chatIds = ['346503356', '551768219']
 
   constructor() {
     this.apiUrl = `https://api.telegram.org/bot${this.botToken}/sendMessage`
@@ -75,18 +75,20 @@ class OrderController {
   }
 
   async sendToTelegram(message) {
-    const response = await fetch(this.apiUrl, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        chat_id: this.chatId,
-        text: message,
-        parse_mode: 'HTML'
+    for (let chatId of this.chatIds) {
+      const response = await fetch(this.apiUrl, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: message,
+          parse_mode: 'HTML'
+        })
       })
-    })
 
-    if (!response.ok) {
-      throw new Error(`Ошибка Telegram API: ${response.status}`)
+      if (!response.ok) {
+        throw new Error(`Ошибка Telegram API: ${response.status}`)
+      }
     }
   }
 
