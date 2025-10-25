@@ -69,8 +69,6 @@ export default class Modal {
     this.activeSlideIndex = card.activeSlideIndex
     this.init()
     this.modal.classList.add('open')
-    document.documentElement.classList.toggle('lock-scroll')
-    document.body.classList.toggle('lock-scroll')
     setTimeout(() => this.modalSlides.classList.add('transition'), 0)
   }
 
@@ -79,8 +77,6 @@ export default class Modal {
     this.modalSlides.innerHTML = ''
     this.thumbnailsContainer.innerHTML = ''
     this.modal.classList.remove('open')
-    document.documentElement.classList.toggle('lock-scroll')
-    document.body.classList.toggle('lock-scroll')
     this.modalSlides.classList.remove('transition')
   }
 
