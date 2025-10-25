@@ -135,7 +135,11 @@ class ProductCard {
         name: this.name,
         price: this.price,
         img: this.images[0].getAttribute('src'),
-        url: window.location.href
+        url:
+          window.location.protocol +
+          '//' +
+          window.location.host +
+          window.location.pathname
       })
     } else if (action === '-') {
       eventBus.dispatch('cart:removeItem', {id: this.id})
@@ -191,7 +195,7 @@ document.addEventListener('touchend', (e) => {
 
 function processParams() {
   const productId = params.get('id')
-  if (productId) {    
+  if (productId) {
     document.querySelectorAll('.product-card').forEach((card) => {
       if (card.id !== productId) {
         card.style.display = 'none'

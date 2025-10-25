@@ -69,7 +69,7 @@ a {
   display: none;
 }
 
-.content {
+.fade-in {
   animation: fadeIn 0.8s ease;
 }
 
@@ -193,7 +193,7 @@ a {
   font-size: 2rem;
   font-weight: 800;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-  text-align: center;  
+  text-align: center;
 }
 
 @media (max-width: 480px) {

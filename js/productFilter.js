@@ -1,159 +1,183 @@
+// productFilter.js
 import eventBus from './eventDispatcher.js'
 
-const searchParams = new URLSearchParams(window.location.search)
-const curPage = window.location.protocol + '//' + window.location.host + window.location.pathname
-const curFilters = {}
-const elements = {}
+const state = {
+  tags: {}
+}
+
+const el = {}
 
 function init() {
-  bindelements()
+  bindElements()
+  if (!el.overlay) return // нет фильтров на странице — выходим
 
-  if (searchParams.get('id')) {
-    hideFilterButton()
-    hideFilterButtonActive()
-    showFilterButtonEmpty()
+  const urlParams = new URLSearchParams(window.location.search)
+
+  // Если открыт конкретный товар — фильтры не нужны
+  if (urlParams.get('id')) {
+    toggle(el.filterButtonEmpty, true)
+    toggle(el.filterButton, false)
+    toggle(el.filterButtonActive, false)
     return
-  } else {
-    hideFilterButtonEmpty()
   }
 
-  addListeners()  
-  initCurFilters()
+  initStateFromURL(urlParams)
+  addListeners()
 
-  if (isFiltersSet()) {
-    hideFilterButton()
-    showFilterButtonActive()
+  if (hasActiveFilters()) {
+    toggle(el.filterButton, false)
+    toggle(el.filterButtonActive, true)
     applyFilters()
+  } else {
+    toggle(el.filterButtonEmpty, false)
   }
 }
 
-function initCurFilters() {
-  curFilters.tags = []
-  const tagsParams = searchParams.get('tags')?.split(',') || []
-  
-  tagsParams.forEach(tag => {
-    curFilters.tags[tag] = true
+/* ---------- Initialization ---------- */
+
+function bindElements() {
+  el.content = document.querySelector('.content')
+  el.overlay = document.getElementById('filters-overlay')
+  el.filtersContent = document.getElementById('filters-content')
+  el.filterButton = document.getElementById('filter-button')
+  el.filterButtonActive = document.getElementById('filter-button-active')
+  el.filterButtonEmpty = document.getElementById('filter-button-empty')
+  el.closeBtn = document.getElementById('close-filters')
+  el.applyButton = document.getElementById('filters-apply-button')
+  el.clearButton = document.getElementById('clear-all-filters')
+  el.tags = el.filtersContent
+    ? Array.from(el.filtersContent.querySelectorAll('input[data-filter-tag]'))
+    : []
+}
+
+/* ---------- State Management ---------- */
+
+function initStateFromURL(urlParams) {
+  state.tags = {}
+  const tags = urlParams.get('tags')?.split(',') || []
+
+  tags.forEach((tag) => {
+    state.tags[tag] = true
   })
 
-  elements.tags.forEach(tag => {
-    if (curFilters.tags[tag.dataset.filterTag]) {
-      tag.checked = true
-    }
+  el.tags.forEach((input) => {
+    input.checked = !!state.tags[input.dataset.filterTag]
   })
 }
 
-function bindelements() {
-  elements.overlay = document.getElementById('filters-overlay')
-  elements.filtersContent = document.getElementById('filters-content')
-  elements.filterButton = document.getElementById('filter-button')
-  elements.filterButtonActive = document.getElementById('filter-button-active')
-  elements.filterButtonEmpty = document.getElementById('filter-button-empty')
-  elements.closeBtn = document.getElementById('close-filters')
-  elements.filterButtonApply = document.getElementById('filters-apply-button')
-  elements.clearAllFiltersButton = document.getElementById('clear-all-filters')
-  elements.tags = Array.from(elements.filtersContent.getElementsByTagName('input'))
-  elements.emptyFilterButton = document.getElementById('empty-filter-button')
+function hasActiveFilters() {
+  return Object.values(state.tags).some(Boolean)
 }
+
+/* ---------- Listeners ---------- */
 
 function addListeners() {
-  elements.overlay.addEventListener('click', (e) => {    
-    if (e.target === elements.overlay) closePannel()
+  el.overlay.addEventListener('click', (e) => {
+    if (e.target === el.overlay) closePanel()
   })
-  elements.filterButton.addEventListener('click', openPannel)
-  elements.filterButtonActive.addEventListener('click', openPannel)
-  elements.filterButtonApply.addEventListener('click', updateFilters)
-  elements.closeBtn.addEventListener('click', closePannel)  
-  elements.clearAllFiltersButton.addEventListener('click', clearAllFilters)
+
+  el.filterButton.addEventListener('click', openPanel)
+  el.filterButtonActive.addEventListener('click', openPanel)
+  el.applyButton.addEventListener('click', updateFilters)
+  el.closeBtn.addEventListener('click', closePanel)
+  el.clearButton.addEventListener('click', clearAllFilters)
 }
 
-function clearAllFilters() {
-  window.location.href = curPage
-}
+/* ---------- Core Logic ---------- */
 
 function updateFilters() {
-  const searchParams = []
-  elements.tags.forEach(input => {    
-    if (input.checked) {      
-      searchParams.push(input.dataset.filterTag)
-    }    
-  })  
-  if (searchParams.length > 0) {
-    window.location.href = curPage + "?tags=" + searchParams.join(',')
-  } else {
-    window.location.href = curPage
-  }
+  const selected = el.tags
+    .filter((i) => i.checked)
+    .map((i) => i.dataset.filterTag)
+
+  // Обновляем состояние
+  state.tags = Object.fromEntries(selected.map((tag) => [tag, true]))
+
+  // Обновляем URL без перезагрузки
+  const baseUrl =
+    window.location.protocol +
+    '//' +
+    window.location.host +
+    window.location.pathname
+  const query = selected.length ? '?tags=' + selected.join(',') : ''
+  history.replaceState(null, '', baseUrl + query)
+
+  // Применяем фильтры динамически
+  applyFilters()
+
+  // Обновляем видимость кнопок
+  toggle(el.filterButtonActive, selected.length > 0)
+  toggle(el.filterButton, selected.length === 0)
+  toggle(el.clearButton, selected.length > 0)
+
+  closePanel()
 }
 
 function applyFilters() {
-  const tags = []
-  elements.tags.forEach(tag => {        
-    if (tag.checked) {
-      tags.push(tag.dataset.filterTag)
-    }
+  const tags = Object.keys(state.tags).filter((tag) => state.tags[tag])
+  eventBus.dispatch('filters:update', {tags})
+  playAnimation()
+}
+
+/* ---------- UI Control ---------- */
+
+function openPanel() {
+  el.overlay.classList.remove('hidden')
+  if (hasActiveFilters()) toggle(el.clearButton, true)
+  lockScroll()
+}
+
+function closePanel() {
+  el.overlay.classList.add('hidden')
+
+  // Возвращаем чекбоксы к текущему состоянию, если пользователь не применил фильтры
+  el.tags.forEach((input) => {
+    input.checked = !!state.tags[input.dataset.filterTag]
   })
-  eventBus.dispatch('filters:update', {tags})  
+
+  unlockScroll()
 }
 
-function closePannel() {
-  elements.overlay.classList.add('hidden')
-  elements.tags.forEach(tag => {    
-    tag.checked = curFilters.tags[tag.dataset.filterTag]    
-  })
-  unlockPageScroll()
+function clearAllFilters() {
+  state.tags = {}
+  el.tags.forEach((t) => (t.checked = false))
+
+  const baseUrl =
+    window.location.protocol +
+    '//' +
+    window.location.host +
+    window.location.pathname
+  history.replaceState(null, '', baseUrl)
+
+  applyFilters()
+  toggle(el.clearButton, false)
+  toggle(el.filterButton, true)
+  toggle(el.filterButtonActive, false)
+  closePanel()
+  playAnimation()
 }
 
-function openPannel() {
-  elements.overlay.classList.remove('hidden')  
-  if (isFiltersSet()) {
-    showClearAllFiltersButton()
-  }
-  lockPageScroll()
-}
+/* ---------- Helpers ---------- */
 
-function isFiltersSet() {
-  let tagsExists = false  
-  Object.keys(curFilters.tags).forEach(tag => tagsExists = tagsExists || curFilters.tags[tag])
-  return tagsExists
-}
-
-function lockPageScroll() {
+function lockScroll() {
   document.body.classList.add('lock-scroll')
 }
 
-function unlockPageScroll() {
+function unlockScroll() {
   document.body.classList.remove('lock-scroll')
 }
 
-function showClearAllFiltersButton() {
-  elements.clearAllFiltersButton.classList.remove('hidden')
+function toggle(element, visible) {
+  if (!element) return
+  element.classList.toggle('hidden', !visible)
 }
 
-function hideClearAllFiltersButton() {
-  elements.clearAllFiltersButton.classList.add('hidden')
+function playAnimation() {
+  if (!el.content) return
+  el.content.classList.remove('fade-in')
+  void el.content.offsetWidth
+  el.content.classList.add('fade-in')
 }
 
-function hideFilterButtonEmpty() {
-  elements.filterButtonEmpty.classList.add('hidden')
-}
-
-function showFilterButtonEmpty() {
-  elements.filterButtonEmpty.classList.remove('hidden')
-}
-
-function showFilterButton() {
-  elements.filterButton.classList.remove('hidden')
-}
-
-function hideFilterButton() {
-  elements.filterButton.classList.add('hidden')
-}
-
-function showFilterButtonActive() {  
-  elements.filterButtonActive.classList.remove('hidden')
-}
-
-function hideFilterButtonActive() {
-  elements.filterButtonActive.classList.add('hidden')
-}
-
+/* ---------- Init ---------- */
 init()
