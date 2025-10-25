@@ -9,6 +9,7 @@ body {
 
 body.lock-scroll {
   overflow-y: hidden;
+  position: fixed;
 }
 
 a {
