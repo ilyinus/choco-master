@@ -89,18 +89,47 @@
     </script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
-      (function(m,e,t,r,i,k,a){
-          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-          m[i].l=1*new Date();
-          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-      })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104854499', 'ym');
+      ;(function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            ;(m[i].a = m[i].a || []).push(arguments)
+          }
+        m[i].l = 1 * new Date()
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return
+          }
+        }
+        ;(k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a)
+      })(
+        window,
+        document,
+        'script',
+        'https://mc.yandex.ru/metrika/tag.js?id=104854499',
+        'ym'
+      )
 
-      ym(104854499, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+      ym(104854499, 'init', {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: 'dataLayer',
+        accurateTrackBounce: true,
+        trackLinks: true
+      })
     </script>
     <noscript>
       <div>
-        <img src="https://mc.yandex.ru/watch/104854499" style="position:absolute; left:-9999px;" alt="" />
+        <img
+          src="https://mc.yandex.ru/watch/104854499"
+          style="position: absolute; left: -9999px"
+          alt=""
+        />
       </div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
@@ -115,24 +144,24 @@
           Сбросить фильтры &times;
         </button>
         <div class="filters-content" id="filters-content">
-    <label class="switch">
-    <span class="label-text">Пельмени</span>
-    <input type="checkbox" data-filter-tag="dumplings"/>
-    <span class="filter-slider"></span>
-</label><label class="switch">
-    <span class="label-text">Пионы</span>
-    <input type="checkbox" data-filter-tag="peonies"/>
-    <span class="filter-slider"></span>
-</label><label class="switch">
-    <span class="label-text">Розы</span>
-    <input type="checkbox" data-filter-tag="roses"/>
-    <span class="filter-slider"></span>
-</label><label class="switch">
-    <span class="label-text">Тюльпаны</span>
-    <input type="checkbox" data-filter-tag="tulips"/>
-    <span class="filter-slider"></span>
-</label>
-</div>
+          <label class="switch">
+            <span class="label-text">Пельмени</span>
+            <input type="checkbox" data-filter-tag="dumplings" />
+            <span class="filter-slider"></span> </label
+          ><label class="switch">
+            <span class="label-text">Пионы</span>
+            <input type="checkbox" data-filter-tag="peonies" />
+            <span class="filter-slider"></span> </label
+          ><label class="switch">
+            <span class="label-text">Розы</span>
+            <input type="checkbox" data-filter-tag="roses" />
+            <span class="filter-slider"></span> </label
+          ><label class="switch">
+            <span class="label-text">Тюльпаны</span>
+            <input type="checkbox" data-filter-tag="tulips" />
+            <span class="filter-slider"></span>
+          </label>
+        </div>
         <button class="filters-apply-button" id="filters-apply-button">
           Применить
         </button>
@@ -210,663 +239,1071 @@
       <!-- Основной контент -->
       <main class="content fade-in">
         <!-- Сетка продуктов -->
-        <div class="product-grid"><div
-  class="product-card"
-  id="product-33"
-  data-categories="Букеты"
-  data-tags="dumplings"
->
-  <div class="slider">
-    <div class="slides"><div class="slide">
-  <img src="../assets/images/cards/33/1.jpg" loading="lazy" class="product-image" alt="Пельмени в букете 27 шт." />
-</div>
-<div class="slide">
-  <img src="../assets/images/cards/33/2.jpg" loading="lazy" class="product-image" alt="Пельмени в букете 27 шт." />
-</div>
-</div>
-    <button class="prev-btn">‹</button>
-    <button class="next-btn">›</button>
-  </div>
-  <div class="dots-container"></div>
-  <div class="product-card-info">
-    <div class="product-card-price" data-price="1590">
-      1590&nbsp;₽
-    </div>
-    <h2 class="product-card-title" data-name="Пельмени в букете 27 шт.">Пельмени в букете 27 шт.</h2>
-    <div class="product-card-cart-controls">
-      <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">
-        -
-      </button>
-      <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">
-        +
-      </button>
-    </div>
-  </div>
-</div>
+        <div class="product-grid">
+          <div
+            class="product-card"
+            id="product-33"
+            data-categories="Букеты"
+            data-tags="dumplings"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/33/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Пельмени в букете 27 шт."
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/33/2.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Пельмени в букете 27 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="1590">
+                1590&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Пельмени в букете 27 шт."
+              >
+                Пельмени в букете 27 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div
-  class="product-card"
-  id="product-34"
-  data-categories="Букеты"
-  data-tags="dumplings"
->
-  <div class="slider">
-    <div class="slides"><div class="slide">
-  <img src="../assets/images/cards/34/1.jpg" loading="lazy" class="product-image" alt="Пельмени в букете 37 шт." />
-</div>
-<div class="slide">
-  <img src="../assets/images/cards/34/2.jpg" loading="lazy" class="product-image" alt="Пельмени в букете 37 шт." />
-</div>
-</div>
-    <button class="prev-btn">‹</button>
-    <button class="next-btn">›</button>
-  </div>
-  <div class="dots-container"></div>
-  <div class="product-card-info">
-    <div class="product-card-price" data-price="1990">
-      1990&nbsp;₽
-    </div>
-    <h2 class="product-card-title" data-name="Пельмени в букете 37 шт.">Пельмени в букете 37 шт.</h2>
-    <div class="product-card-cart-controls">
-      <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">
-        -
-      </button>
-      <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">
-        +
-      </button>
-    </div>
-  </div>
-</div>
+          <div
+            class="product-card"
+            id="product-34"
+            data-categories="Букеты"
+            data-tags="dumplings"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/34/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Пельмени в букете 37 шт."
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/34/2.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Пельмени в букете 37 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="1990">
+                1990&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Пельмени в букете 37 шт."
+              >
+                Пельмени в букете 37 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div
-  class="product-card"
-  id="product-35"
-  data-categories="Букеты"
-  data-tags="dumplings"
->
-  <div class="slider">
-    <div class="slides"><div class="slide">
-  <img src="../assets/images/cards/35/1.jpg" loading="lazy" class="product-image" alt="Пельмени в букете 15 шт." />
-</div>
-</div>
-    <button class="prev-btn">‹</button>
-    <button class="next-btn">›</button>
-  </div>
-  <div class="dots-container"></div>
-  <div class="product-card-info">
-    <div class="product-card-price" data-price="990">
-      990&nbsp;₽
-    </div>
-    <h2 class="product-card-title" data-name="Пельмени в букете 15 шт.">Пельмени в букете 15 шт.</h2>
-    <div class="product-card-cart-controls">
-      <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">
-        -
-      </button>
-      <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">
-        +
-      </button>
-    </div>
-  </div>
-</div>
+          <div
+            class="product-card"
+            id="product-35"
+            data-categories="Букеты"
+            data-tags="dumplings"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/35/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Пельмени в букете 15 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="990">990&nbsp;₽</div>
+              <h2
+                class="product-card-title"
+                data-name="Пельмени в букете 15 шт."
+              >
+                Пельмени в букете 15 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div
-  class="product-card"
-  id="product-36"
-  data-categories="Букеты"
-  data-tags="dumplings"
->
-  <div class="slider">
-    <div class="slides"><div class="slide">
-  <img src="../assets/images/cards/36/1.jpg" loading="lazy" class="product-image" alt="Пельмени в букете 45 шт." />
-</div>
-<div class="slide">
-  <img src="../assets/images/cards/36/2.jpg" loading="lazy" class="product-image" alt="Пельмени в букете 45 шт." />
-</div>
-</div>
-    <button class="prev-btn">‹</button>
-    <button class="next-btn">›</button>
-  </div>
-  <div class="dots-container"></div>
-  <div class="product-card-info">
-    <div class="product-card-price" data-price="2190">
-      2190&nbsp;₽
-    </div>
-    <h2 class="product-card-title" data-name="Пельмени в букете 45 шт.">Пельмени в букете 45 шт.</h2>
-    <div class="product-card-cart-controls">
-      <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">
-        -
-      </button>
-      <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">
-        +
-      </button>
-    </div>
-  </div>
-</div>
+          <div
+            class="product-card"
+            id="product-36"
+            data-categories="Букеты"
+            data-tags="dumplings"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/36/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Пельмени в букете 45 шт."
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/36/2.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Пельмени в букете 45 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="2190">
+                2190&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Пельмени в букете 45 шт."
+              >
+                Пельмени в букете 45 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div
-  class="product-card"
-  id="product-37"
-  data-categories="Букеты"
-  data-tags="dumplings"
->
-  <div class="slider">
-    <div class="slides"><div class="slide">
-  <img src="../assets/images/cards/37/1.jpg" loading="lazy" class="product-image" alt="Пельмени в букете 19 шт." />
-</div>
-</div>
-    <button class="prev-btn">‹</button>
-    <button class="next-btn">›</button>
-  </div>
-  <div class="dots-container"></div>
-  <div class="product-card-info">
-    <div class="product-card-price" data-price="1290">
-      1290&nbsp;₽
-    </div>
-    <h2 class="product-card-title" data-name="Пельмени в букете 19 шт.">Пельмени в букете 19 шт.</h2>
-    <div class="product-card-cart-controls">
-      <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">
-        -
-      </button>
-      <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">
-        +
-      </button>
-    </div>
-  </div>
-</div>
+          <div
+            class="product-card"
+            id="product-37"
+            data-categories="Букеты"
+            data-tags="dumplings"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/37/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Пельмени в букете 19 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="1290">
+                1290&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Пельмени в букете 19 шт."
+              >
+                Пельмени в букете 19 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div
-  class="product-card"
-  id="product-66"
-  data-categories="Букеты"
-  data-tags="peonies"
->
-  <div class="slider">
-    <div class="slides"><div class="slide">
-  <img src="../assets/images/cards/66/1.jpg" loading="lazy" class="product-image" alt="Шоколадные пионы в букете 13 шт." />
-</div>
-<div class="slide">
-  <img src="../assets/images/cards/66/2.jpg" loading="lazy" class="product-image" alt="Шоколадные пионы в букете 13 шт." />
-</div>
-</div>
-    <button class="prev-btn">‹</button>
-    <button class="next-btn">›</button>
-  </div>
-  <div class="dots-container"></div>
-  <div class="product-card-info">
-    <div class="product-card-price" data-price="1590">
-      1590&nbsp;₽
-    </div>
-    <h2 class="product-card-title" data-name="Шоколадные пионы в букете 13 шт.">Шоколадные пионы в букете 13 шт.</h2>
-    <div class="product-card-cart-controls">
-      <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">
-        -
-      </button>
-      <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">
-        +
-      </button>
-    </div>
-  </div>
-</div>
+          <div
+            class="product-card"
+            id="product-66"
+            data-categories="Букеты"
+            data-tags="peonies"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/66/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные пионы в букете 13 шт."
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/66/2.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные пионы в букете 13 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="1590">
+                1590&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Шоколадные пионы в букете 13 шт."
+              >
+                Шоколадные пионы в букете 13 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div
-  class="product-card"
-  id="product-67"
-  data-categories="Букеты"
-  data-tags="peonies"
->
-  <div class="slider">
-    <div class="slides"><div class="slide">
-  <img src="../assets/images/cards/67/1.jpg" loading="lazy" class="product-image" alt="Шоколадные пионы в букете 19 шт." />
-</div>
-<div class="slide">
-  <img src="../assets/images/cards/67/2.jpg" loading="lazy" class="product-image" alt="Шоколадные пионы в букете 19 шт." />
-</div>
-</div>
-    <button class="prev-btn">‹</button>
-    <button class="next-btn">›</button>
-  </div>
-  <div class="dots-container"></div>
-  <div class="product-card-info">
-    <div class="product-card-price" data-price="1990">
-      1990&nbsp;₽
-    </div>
-    <h2 class="product-card-title" data-name="Шоколадные пионы в букете 19 шт.">Шоколадные пионы в букете 19 шт.</h2>
-    <div class="product-card-cart-controls">
-      <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">
-        -
-      </button>
-      <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">
-        +
-      </button>
-    </div>
-  </div>
-</div>
+          <div
+            class="product-card"
+            id="product-67"
+            data-categories="Букеты"
+            data-tags="peonies"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/67/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные пионы в букете 19 шт."
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/67/2.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные пионы в букете 19 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="1990">
+                1990&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Шоколадные пионы в букете 19 шт."
+              >
+                Шоколадные пионы в букете 19 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div
-  class="product-card"
-  id="product-68"
-  data-categories="Букеты"
-  data-tags="peonies"
->
-  <div class="slider">
-    <div class="slides"><div class="slide">
-  <img src="../assets/images/cards/68/1.jpg" loading="lazy" class="product-image" alt="Шоколадные пионы в букете 25 шт." />
-</div>
-<div class="slide">
-  <img src="../assets/images/cards/68/2.jpg" loading="lazy" class="product-image" alt="Шоколадные пионы в букете 25 шт." />
-</div>
-</div>
-    <button class="prev-btn">‹</button>
-    <button class="next-btn">›</button>
-  </div>
-  <div class="dots-container"></div>
-  <div class="product-card-info">
-    <div class="product-card-price" data-price="2390">
-      2390&nbsp;₽
-    </div>
-    <h2 class="product-card-title" data-name="Шоколадные пионы в букете 25 шт.">Шоколадные пионы в букете 25 шт.</h2>
-    <div class="product-card-cart-controls">
-      <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">
-        -
-      </button>
-      <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">
-        +
-      </button>
-    </div>
-  </div>
-</div>
+          <div
+            class="product-card"
+            id="product-68"
+            data-categories="Букеты"
+            data-tags="peonies"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/68/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные пионы в букете 25 шт."
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/68/2.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные пионы в букете 25 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="2390">
+                2390&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Шоколадные пионы в букете 25 шт."
+              >
+                Шоколадные пионы в букете 25 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div
-  class="product-card"
-  id="product-69"
-  data-categories="Букеты"
-  data-tags="peonies"
->
-  <div class="slider">
-    <div class="slides"><div class="slide">
-  <img src="../assets/images/cards/69/1.jpg" loading="lazy" class="product-image" alt="Шоколадные пионы в букете 7 шт." />
-</div>
-</div>
-    <button class="prev-btn">‹</button>
-    <button class="next-btn">›</button>
-  </div>
-  <div class="dots-container"></div>
-  <div class="product-card-info">
-    <div class="product-card-price" data-price="1190">
-      1190&nbsp;₽
-    </div>
-    <h2 class="product-card-title" data-name="Шоколадные пионы в букете 7 шт.">Шоколадные пионы в букете 7 шт.</h2>
-    <div class="product-card-cart-controls">
-      <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">
-        -
-      </button>
-      <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">
-        +
-      </button>
-    </div>
-  </div>
-</div>
+          <div
+            class="product-card"
+            id="product-69"
+            data-categories="Букеты"
+            data-tags="peonies"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/69/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные пионы в букете 7 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="1190">
+                1190&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Шоколадные пионы в букете 7 шт."
+              >
+                Шоколадные пионы в букете 7 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div
-  class="product-card"
-  id="product-73"
-  data-categories="Букеты"
-  data-tags="peonies"
->
-  <div class="slider">
-    <div class="slides"><div class="slide">
-  <img src="../assets/images/cards/73/1.jpg" loading="lazy" class="product-image" alt="Шоколадные пионы в букете 11 шт." />
-</div>
-<div class="slide">
-  <img src="../assets/images/cards/73/2.jpg" loading="lazy" class="product-image" alt="Шоколадные пионы в букете 11 шт." />
-</div>
-</div>
-    <button class="prev-btn">‹</button>
-    <button class="next-btn">›</button>
-  </div>
-  <div class="dots-container"></div>
-  <div class="product-card-info">
-    <div class="product-card-price" data-price="1390">
-      1390&nbsp;₽
-    </div>
-    <h2 class="product-card-title" data-name="Шоколадные пионы в букете 11 шт.">Шоколадные пионы в букете 11 шт.</h2>
-    <div class="product-card-cart-controls">
-      <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">
-        -
-      </button>
-      <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">
-        +
-      </button>
-    </div>
-  </div>
-</div>
+          <div
+            class="product-card"
+            id="product-73"
+            data-categories="Букеты"
+            data-tags="peonies"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/73/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные пионы в букете 11 шт."
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/73/2.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные пионы в букете 11 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="1390">
+                1390&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Шоколадные пионы в букете 11 шт."
+              >
+                Шоколадные пионы в букете 11 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div
-  class="product-card"
-  id="product-74"
-  data-categories="Букеты"
-  data-tags="roses"
->
-  <div class="slider">
-    <div class="slides"><div class="slide">
-  <img src="../assets/images/cards/74/1.jpg" loading="lazy" class="product-image" alt="Шоколадные розы в букете 19 шт." />
-</div>
-<div class="slide">
-  <img src="../assets/images/cards/74/2.jpg" loading="lazy" class="product-image" alt="Шоколадные розы в букете 19 шт." />
-</div>
-<div class="slide">
-  <img src="../assets/images/cards/74/3.jpg" loading="lazy" class="product-image" alt="Шоколадные розы в букете 19 шт." />
-</div>
-<div class="slide">
-  <img src="../assets/images/cards/74/4.jpg" loading="lazy" class="product-image" alt="Шоколадные розы в букете 19 шт." />
-</div>
-</div>
-    <button class="prev-btn">‹</button>
-    <button class="next-btn">›</button>
-  </div>
-  <div class="dots-container"></div>
-  <div class="product-card-info">
-    <div class="product-card-price" data-price="1390">
-      1390&nbsp;₽
-    </div>
-    <h2 class="product-card-title" data-name="Шоколадные розы в букете 19 шт.">Шоколадные розы в букете 19 шт.</h2>
-    <div class="product-card-cart-controls">
-      <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">
-        -
-      </button>
-      <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">
-        +
-      </button>
-    </div>
-  </div>
-</div>
+          <div
+            class="product-card"
+            id="product-74"
+            data-categories="Букеты"
+            data-tags="roses"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/74/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные розы в букете 19 шт."
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/74/2.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные розы в букете 19 шт."
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/74/3.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные розы в букете 19 шт."
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/74/4.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные розы в букете 19 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="1390">
+                1390&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Шоколадные розы в букете 19 шт."
+              >
+                Шоколадные розы в букете 19 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div
-  class="product-card"
-  id="product-75"
-  data-categories="Букеты"
-  data-tags="roses"
->
-  <div class="slider">
-    <div class="slides"><div class="slide">
-  <img src="../assets/images/cards/75/1.jpg" loading="lazy" class="product-image" alt="Шоколадные розы в букете 25 шт." />
-</div>
-</div>
-    <button class="prev-btn">‹</button>
-    <button class="next-btn">›</button>
-  </div>
-  <div class="dots-container"></div>
-  <div class="product-card-info">
-    <div class="product-card-price" data-price="1690">
-      1690&nbsp;₽
-    </div>
-    <h2 class="product-card-title" data-name="Шоколадные розы в букете 25 шт.">Шоколадные розы в букете 25 шт.</h2>
-    <div class="product-card-cart-controls">
-      <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">
-        -
-      </button>
-      <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">
-        +
-      </button>
-    </div>
-  </div>
-</div>
+          <div
+            class="product-card"
+            id="product-75"
+            data-categories="Букеты"
+            data-tags="roses"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/75/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные розы в букете 25 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="1690">
+                1690&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Шоколадные розы в букете 25 шт."
+              >
+                Шоколадные розы в букете 25 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div
-  class="product-card"
-  id="product-77"
-  data-categories="Букеты"
-  data-tags="roses"
->
-  <div class="slider">
-    <div class="slides"><div class="slide">
-  <img src="../assets/images/cards/77/1.jpg" loading="lazy" class="product-image" alt="Шоколадные розы в букете 45 шт." />
-</div>
-</div>
-    <button class="prev-btn">‹</button>
-    <button class="next-btn">›</button>
-  </div>
-  <div class="dots-container"></div>
-  <div class="product-card-info">
-    <div class="product-card-price" data-price="2190">
-      2190&nbsp;₽
-    </div>
-    <h2 class="product-card-title" data-name="Шоколадные розы в букете 45 шт.">Шоколадные розы в букете 45 шт.</h2>
-    <div class="product-card-cart-controls">
-      <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">
-        -
-      </button>
-      <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">
-        +
-      </button>
-    </div>
-  </div>
-</div>
+          <div
+            class="product-card"
+            id="product-77"
+            data-categories="Букеты"
+            data-tags="roses"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/77/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные розы в букете 45 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="2190">
+                2190&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Шоколадные розы в букете 45 шт."
+              >
+                Шоколадные розы в букете 45 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div
-  class="product-card"
-  id="product-78"
-  data-categories="Букеты"
-  data-tags="roses"
->
-  <div class="slider">
-    <div class="slides"><div class="slide">
-  <img src="../assets/images/cards/78/1.jpg" loading="lazy" class="product-image" alt="Шоколадные пионы в букете 7 шт." />
-</div>
-</div>
-    <button class="prev-btn">‹</button>
-    <button class="next-btn">›</button>
-  </div>
-  <div class="dots-container"></div>
-  <div class="product-card-info">
-    <div class="product-card-price" data-price="790">
-      790&nbsp;₽
-    </div>
-    <h2 class="product-card-title" data-name="Шоколадные пионы в букете 7 шт.">Шоколадные пионы в букете 7 шт.</h2>
-    <div class="product-card-cart-controls">
-      <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">
-        -
-      </button>
-      <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">
-        +
-      </button>
-    </div>
-  </div>
-</div>
+          <div
+            class="product-card"
+            id="product-78"
+            data-categories="Букеты"
+            data-tags="roses"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/78/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные пионы в букете 7 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="790">790&nbsp;₽</div>
+              <h2
+                class="product-card-title"
+                data-name="Шоколадные пионы в букете 7 шт."
+              >
+                Шоколадные пионы в букете 7 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div
-  class="product-card"
-  id="product-79"
-  data-categories="Букеты"
-  data-tags="roses"
->
-  <div class="slider">
-    <div class="slides"><div class="slide">
-  <img src="../assets/images/cards/79/1.jpg" loading="lazy" class="product-image" alt="Шоколадные розы в букете 35 шт." />
-</div>
-</div>
-    <button class="prev-btn">‹</button>
-    <button class="next-btn">›</button>
-  </div>
-  <div class="dots-container"></div>
-  <div class="product-card-info">
-    <div class="product-card-price" data-price="1990">
-      1990&nbsp;₽
-    </div>
-    <h2 class="product-card-title" data-name="Шоколадные розы в букете 35 шт.">Шоколадные розы в букете 35 шт.</h2>
-    <div class="product-card-cart-controls">
-      <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">
-        -
-      </button>
-      <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">
-        +
-      </button>
-    </div>
-  </div>
-</div>
+          <div
+            class="product-card"
+            id="product-79"
+            data-categories="Букеты"
+            data-tags="roses"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/79/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные розы в букете 35 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="1990">
+                1990&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Шоколадные розы в букете 35 шт."
+              >
+                Шоколадные розы в букете 35 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div
-  class="product-card"
-  id="product-83"
-  data-categories="Букеты"
-  data-tags="roses"
->
-  <div class="slider">
-    <div class="slides"><div class="slide">
-  <img src="../assets/images/cards/83/1.jpg" loading="lazy" class="product-image" alt="Шоколадные розы в букете 37 шт." />
-</div>
-</div>
-    <button class="prev-btn">‹</button>
-    <button class="next-btn">›</button>
-  </div>
-  <div class="dots-container"></div>
-  <div class="product-card-info">
-    <div class="product-card-price" data-price="1890">
-      1890&nbsp;₽
-    </div>
-    <h2 class="product-card-title" data-name="Шоколадные розы в букете 37 шт.">Шоколадные розы в букете 37 шт.</h2>
-    <div class="product-card-cart-controls">
-      <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">
-        -
-      </button>
-      <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">
-        +
-      </button>
-    </div>
-  </div>
-</div>
+          <div
+            class="product-card"
+            id="product-83"
+            data-categories="Букеты"
+            data-tags="roses"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/83/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные розы в букете 37 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="1890">
+                1890&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Шоколадные розы в букете 37 шт."
+              >
+                Шоколадные розы в букете 37 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div
-  class="product-card"
-  id="product-85"
-  data-categories="Букеты"
-  data-tags="tulips"
->
-  <div class="slider">
-    <div class="slides"><div class="slide">
-  <img src="../assets/images/cards/85/1.jpg" loading="lazy" class="product-image" alt="Шоколадные тюльпаны в букете 13 шт." />
-</div>
-</div>
-    <button class="prev-btn">‹</button>
-    <button class="next-btn">›</button>
-  </div>
-  <div class="dots-container"></div>
-  <div class="product-card-info">
-    <div class="product-card-price" data-price="1390">
-      1390&nbsp;₽
-    </div>
-    <h2 class="product-card-title" data-name="Шоколадные тюльпаны в букете 13 шт.">Шоколадные тюльпаны в букете 13 шт.</h2>
-    <div class="product-card-cart-controls">
-      <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">
-        -
-      </button>
-      <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">
-        +
-      </button>
-    </div>
-  </div>
-</div>
+          <div
+            class="product-card"
+            id="product-85"
+            data-categories="Букеты"
+            data-tags="tulips"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/85/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные тюльпаны в букете 13 шт."
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="1390">
+                1390&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Шоколадные тюльпаны в букете 13 шт."
+              >
+                Шоколадные тюльпаны в букете 13 шт.
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div
-  class="product-card"
-  id="product-86"
-  data-categories="Букеты"
-  data-tags="tulips"
->
-  <div class="slider">
-    <div class="slides"><div class="slide">
-  <img src="../assets/images/cards/86/1.jpg" loading="lazy" class="product-image" alt="Шоколадные тюльпаны в букете 15 шт. с мишкой" />
-</div>
-</div>
-    <button class="prev-btn">‹</button>
-    <button class="next-btn">›</button>
-  </div>
-  <div class="dots-container"></div>
-  <div class="product-card-info">
-    <div class="product-card-price" data-price="1590">
-      1590&nbsp;₽
-    </div>
-    <h2 class="product-card-title" data-name="Шоколадные тюльпаны в букете 15 шт. с мишкой">Шоколадные тюльпаны в букете 15 шт. с мишкой</h2>
-    <div class="product-card-cart-controls">
-      <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">
-        -
-      </button>
-      <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">
-        +
-      </button>
-    </div>
-  </div>
-</div>
+          <div
+            class="product-card"
+            id="product-86"
+            data-categories="Букеты"
+            data-tags="tulips"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/86/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные тюльпаны в букете 15 шт. с мишкой"
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="1590">
+                1590&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Шоколадные тюльпаны в букете 15 шт. с мишкой"
+              >
+                Шоколадные тюльпаны в букете 15 шт. с мишкой
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div
-  class="product-card"
-  id="product-87"
-  data-categories="Букеты"
-  data-tags="tulips"
->
-  <div class="slider">
-    <div class="slides"><div class="slide">
-  <img src="../assets/images/cards/87/1.jpg" loading="lazy" class="product-image" alt="Шоколадные тюльпаны в букете 17 шт. с мишкой" />
-</div>
-</div>
-    <button class="prev-btn">‹</button>
-    <button class="next-btn">›</button>
-  </div>
-  <div class="dots-container"></div>
-  <div class="product-card-info">
-    <div class="product-card-price" data-price="1690">
-      1690&nbsp;₽
-    </div>
-    <h2 class="product-card-title" data-name="Шоколадные тюльпаны в букете 17 шт. с мишкой">Шоколадные тюльпаны в букете 17 шт. с мишкой</h2>
-    <div class="product-card-cart-controls">
-      <button class="product-card-add-to-cart-button">В корзину</button>
-      <button class="product-card-cart-count-button hide" data-action="-">
-        -
-      </button>
-      <div class="product-card-cart-count hide"></div>
-      <button class="product-card-cart-count-button hide" data-action="+">
-        +
-      </button>
-    </div>
-  </div>
-</div>
-</div>
+          <div
+            class="product-card"
+            id="product-87"
+            data-categories="Букеты"
+            data-tags="tulips"
+          >
+            <div class="slider">
+              <div class="slides">
+                <div class="slide">
+                  <img
+                    src="../assets/images/cards/87/1.jpg"
+                    loading="lazy"
+                    class="product-image"
+                    alt="Шоколадные тюльпаны в букете 17 шт. с мишкой"
+                  />
+                </div>
+              </div>
+              <button class="prev-btn">‹</button>
+              <button class="next-btn">›</button>
+            </div>
+            <div class="dots-container"></div>
+            <div class="product-card-info">
+              <div class="product-card-price" data-price="1690">
+                1690&nbsp;₽
+              </div>
+              <h2
+                class="product-card-title"
+                data-name="Шоколадные тюльпаны в букете 17 шт. с мишкой"
+              >
+                Шоколадные тюльпаны в букете 17 шт. с мишкой
+              </h2>
+              <div class="product-card-cart-controls">
+                <button class="product-card-add-to-cart-button">
+                  В корзину
+                </button>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="-"
+                >
+                  -
+                </button>
+                <div class="product-card-cart-count hide"></div>
+                <button
+                  class="product-card-cart-count-button hide"
+                  data-action="+"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
 
