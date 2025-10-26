@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+Host: choco-master.ru
+
+Sitemap: https://choco-master.ru/sitemap.xml
+
+Disallow: /pages/cart.html
+Disallow: /*?id=
+
+Clean-param: id /pages/boxes.html
+Clean-param: id /pages/bouquets.html
