@@ -30,8 +30,8 @@ const templates = {
 const tagsMap = {
   dumplings: 'Пельмени',
   '8-march': '8 марта',
+  '8-march-2026': '8 марта 2026',
   'new-year': 'Новый год',
-  'new-year-2026': 'Новый год 2026',
   thematic: 'Тематические',
   '23-febraury': '23 февраля',
   easter: 'Пасха',
