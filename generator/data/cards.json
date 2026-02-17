@@ -19,7 +19,7 @@
     "id": 3,
     "name": "Пенал на 5 конфет",
     "categories": ["Коробки"],
-    "tags": [],
+    "tags": ["8-march"],
     "price": 790,
     "images": 1
   },
@@ -99,7 +99,7 @@
     "id": 13,
     "name": "Коробка конфет 8 марта",
     "categories": ["Коробки"],
-    "tags": ["8-march"],
+    "tags": ["8-march-2026", "8-march"],
     "price": 1390,
     "images": 1
   },
@@ -107,7 +107,7 @@
     "id": 14,
     "name": "Коробка конфет на 5 ячеек",
     "categories": ["Коробки"],
-    "tags": [],
+    "tags": ["8-march-2026", "8-march"],
     "price": 790,
     "images": 1
   },
@@ -699,7 +699,7 @@
     "id": 88,
     "name": "Коробка конфет Новогодняя, 9 шт.",
     "categories": ["Коробки"],
-    "tags": ["new-year-2026"],
+    "tags": ["new-year"],
     "price": 990,
     "images": 1
   },
@@ -707,7 +707,7 @@
     "id": 89,
     "name": "Коробка конфет Новогодняя с фонариком",
     "categories": ["Коробки"],
-    "tags": ["new-year-2026"],
+    "tags": ["new-year"],
     "price": 990,
     "images": 1
   },
@@ -715,7 +715,7 @@
     "id": 90,
     "name": "Коробка конфет Новогодняя 2026 с лошадкой",
     "categories": ["Коробки"],
-    "tags": ["new-year-2026"],
+    "tags": ["new-year"],
     "price": 1590,
     "images": 1
   },
@@ -723,7 +723,7 @@
     "id": 91,
     "name": "Коробка конфет Новогодняя 2026 с лошадкой",
     "categories": ["Коробки"],
-    "tags": ["new-year-2026"],
+    "tags": ["new-year"],
     "price": 990,
     "images": 1
   },
@@ -731,7 +731,7 @@
     "id": 92,
     "name": "Пенал новогодний паровозик на 5 конфет",
     "categories": ["Коробки"],
-    "tags": ["new-year-2026"],
+    "tags": ["new-year"],
     "price": 790,
     "images": 1
   },
@@ -739,7 +739,7 @@
     "id": 93,
     "name": "Пенал новогодний на 5 конфет",
     "categories": ["Коробки"],
-    "tags": ["new-year-2026"],
+    "tags": ["new-year"],
     "price": 790,
     "images": 1
   },
@@ -747,7 +747,7 @@
     "id": 94,
     "name": "Коробка новогодняя с гномиком",
     "categories": ["Коробки"],
-    "tags": ["new-year-2026"],
+    "tags": ["new-year"],
     "price": 1390,
     "images": 1
   },
@@ -755,7 +755,7 @@
     "id": 95,
     "name": "Коробка новогодняя с мишкой",
     "categories": ["Коробки"],
-    "tags": ["new-year-2026"],
+    "tags": ["new-year"],
     "price": 990,
     "images": 1
   },
@@ -763,7 +763,7 @@
     "id": 96,
     "name": "Коробка новогодняя с паровозиком и фонариком",
     "categories": ["Коробки"],
-    "tags": ["new-year-2026"],
+    "tags": ["new-year"],
     "price": 1390,
     "images": 1
   },
@@ -771,7 +771,7 @@
     "id": 97,
     "name": "Пенал новогодний на 5 конфет",
     "categories": ["Коробки"],
-    "tags": ["new-year-2026"],
+    "tags": ["new-year"],
     "price": 790,
     "images": 1
   },
@@ -779,7 +779,7 @@
     "id": 98,
     "name": "Коробка конфет Новогодняя, 9 шт.",
     "categories": ["Коробки"],
-    "tags": ["new-year-2026"],
+    "tags": ["new-year"],
     "price": 990,
     "images": 1
   },
@@ -787,7 +787,7 @@
     "id": 99,
     "name": "Коробка конфет Новогодняя, 16 шт.",
     "categories": ["Коробки"],
-    "tags": ["new-year-2026"],
+    "tags": ["new-year"],
     "price": 1590,
     "images": 1
   },
@@ -795,7 +795,7 @@
     "id": 100,
     "name": "Коробка конфет Новогодняя, 4 шт.",
     "categories": ["Коробки"],
-    "tags": ["new-year-2026"],
+    "tags": ["new-year"],
     "price": 500,
     "images": 1
   },
@@ -803,8 +803,72 @@
     "id": 101,
     "name": "Коробка конфет Новогодняя, 4 шт.",
     "categories": ["Коробки"],
-    "tags": ["new-year-2026"],
+    "tags": ["new-year"],
     "price": 500,
+    "images": 1
+  },
+  {
+    "id": 102,
+    "name": "Коробка конфет на 16 шт.",
+    "categories": ["Коробки"],
+    "tags": ["8-march-2026", "8-march"],
+    "price": 1590,
+    "images": 1
+  },
+  {
+    "id": 103,
+    "name": "Коробка конфет на 12 шт.",
+    "categories": ["Коробки"],
+    "tags": ["8-march-2026", "8-march"],
+    "price": 1290,
+    "images": 1
+  },
+  {
+    "id": 104,
+    "name": "Пенал на 5 шт.",
+    "categories": ["Коробки"],
+    "tags": ["8-march-2026", "8-march"],
+    "price": 790,
+    "images": 1
+  },
+  {
+    "id": 105,
+    "name": "Коробка конфет на 12 шт.",
+    "categories": ["Коробки"],
+    "tags": ["8-march-2026", "8-march"],
+    "price": 1290,
+    "images": 1
+  },
+  {
+    "id": 106,
+    "name": "Коробка конфет на 16 шт.",
+    "categories": ["Коробки"],
+    "tags": ["8-march-2026", "8-march"],
+    "price": 1590,
+    "images": 1
+  },
+  {
+    "id": 107,
+    "name": "Коробка конфет на 9 шт.",
+    "categories": ["Коробки"],
+    "tags": ["8-march-2026", "8-march"],
+    "price": 990,
+    "images": 1
+  },
+  {
+    "id": 108,
+    "name": "Пенал на 5 шт.",
+    "categories": ["Коробки"],
+    "tags": ["8-march-2026", "8-march"],
+    "price": 790,
+    "images": 1
+  },
+  {
+    "id": 109,
+    "name": "Коробка на 9 шт. (990 р.), коробка на 12 шт. (1290 р.)",
+    "categories": ["Коробки"],
+    "tags": ["8-march-2026", "8-march"],
+    "price": 1290,
     "images": 1
   }
 ]
